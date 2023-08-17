@@ -12,7 +12,7 @@ const AppHeader = ({toggleSidebar}) => {
             <BiMenuAltRight size={25} />
           </Button>
         </div>
-        <div className="col-2">
+        <div className="col-2" id="header-icons">
           <Badge count={20} className="m-2">
             <BsBell size={25} />
           </Badge>

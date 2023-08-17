@@ -28,6 +28,17 @@
 .app-icon-flex div:hover {
   cursor: pointer;
 }
+.ant-layout-sider-trigger {
+  background-color: teal!important;
+}
 .toggleBtn:hover {
   cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px){
+  #header-icons {
+    display: none;
+  }
 }
