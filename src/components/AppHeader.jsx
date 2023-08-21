@@ -1,5 +1,6 @@
 import React from "react";
-import {Layout, Typography, Button, Badge, Row, Col, Avatar} from "antd";
+import {Layout, Typography, Button, Badge, Avatar} from "antd";
+import {UserOutlined} from "@ant-design/icons";
 import {BiMenuAltRight} from "react-icons/bi";
 import {BsBell, BsPerson} from "react-icons/bs";
 const {Header} = Layout;
@@ -13,10 +14,10 @@ const AppHeader = ({toggleSidebar}) => {
           </Button>
         </div>
         <div className="col-2" id="header-icons">
-          <Badge count={20} className="m-2">
+          <Badge count={20} dot className="m-2">
             <BsBell size={25} />
           </Badge>
-          <BsPerson size={25} className="m-2" />
+          <Avatar icon={<UserOutlined />} size={30} />
         </div>
       </div>
     </Header>

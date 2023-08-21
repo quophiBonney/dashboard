@@ -41,18 +41,18 @@ const SideMenu = ({collapsed}) => {
             Analytics
           </Link>
         </Menu.Item>
-        <Menu.SubMenu key="bids" icon={<BsPerson />} title="Bids & Contract">
+        <Menu.SubMenu icon={<BsPerson />} title="Bids & Contract">
           <Menu.Item key="/bids" icon={<BsTable />}>
             <Link to="/bids" className="text-decoration-none">
               All Bids
             </Link>
           </Menu.Item>
-          <Menu.Item key="/contract-management" icon={<BsTable />}>
-            <Link to="/contract-management" className="text-decoration-none">
-              Contract Management
+          <Menu.Item icon={<BsTable />}>
+            <Link to="/contractors" className="text-decoration-none">
+              Contractors
             </Link>
           </Menu.Item>
-          <Menu.Item key="/notification" icon={<BsPerson />}>
+          <Menu.Item icon={<BsPerson />}>
             <Link to="/notification" className="text-decoration-none">
               Notification
             </Link>
