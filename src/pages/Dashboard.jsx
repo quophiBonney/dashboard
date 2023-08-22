@@ -1,58 +1,52 @@
 import React from "react";
-import {Layout, Row, Col, Typography, Button} from "antd";
+import {Typography} from "antd";
+import LineChart from "./LineChart";
+import BarChart from "./BarChart";
 const Dashboard = () => {
   return (
     <div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
+          <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
               <Typography.Title level={4}>Active Users</Typography.Title>
               <p className="figure">25K</p>
+              <hr className="bg-light" />
+              <p>20/12/2023</p>
             </div>
           </div>
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
+          <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
               <Typography.Title level={4}>Active Users</Typography.Title>
               <p className="figure">25K</p>
+              <hr className="bg-light" />
+              <p>20/12/2023</p>
             </div>
           </div>
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
+          <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
               <Typography.Title level={4}>Active Users</Typography.Title>
               <p className="figure">25K</p>
+              <hr className="bg-light" />
+              <p>20/12/2023</p>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
+            <div className="card shadow px-5 py-3">
+              <Typography.Title level={4}>Active Users</Typography.Title>
+              <p className="figure">25K</p>
+              <hr className="bg-light" />
+              <p>20/12/2023</p>
             </div>
           </div>
           <div className="col-12 text-center mt-3">
-            <div className="card shadow px-5 py-5">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officia, veniam magnam! Nisi sunt corporis alias similique
-                voluptatem! Quisquam dolor iste vitae adipisci fugiat autem
-                aspernatur ex saepe enim non amet, impedit provident deleniti
-                praesentium explicabo! Obcaecati saepe laudantium maiores
-                laborum incidunt sunt molestiae repellat explicabo, dolorum
-                provident, fuga sapiente pariatur alias dolor esse, quos
-                voluptatibus error eos? Laboriosam, amet explicabo.
-              </p>
+            <div className="card shadow px-5 py-2">
+              <LineChart />
             </div>
           </div>
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
-            <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
-            <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-4 col-lg-4 text-center mt-3">
-            <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
+          <div className="col-12 text-center mt-3">
+            <div className="card shadow px-5 py-2">
+              <BarChart />
             </div>
           </div>
         </div>

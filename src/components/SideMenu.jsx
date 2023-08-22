@@ -9,8 +9,8 @@ const SideMenu = ({collapsed}) => {
   return (
     <Sider
       collapsible
-      collapsed={collapsed}
       className="sidebar"
+      collapsed={collapsed}
       style={{backgroundColor: "teal"}}
     >
       <Menu mode="inline">
