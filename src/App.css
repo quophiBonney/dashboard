@@ -8,6 +8,15 @@
   width: 100%!important;
   overflow: hidden;
 }
+.filter {
+  border-radius: 7px;
+}
+#dropdown-basic::after {
+  display: none;
+}
+.custom-dropdown-menu {
+  padding: 10px 0!important;
+}
 .ant-layout-sider{
   background: teal!important;
 }
@@ -38,7 +47,7 @@
 
 
 @media screen and (max-width: 768px){
-  #header-icons {
+  .hide {
     display: none;
   }
 }

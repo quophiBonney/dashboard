@@ -93,9 +93,12 @@ const Contractors = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-12 mb-2 mt-2">
-            <div className="ms-auto" style={{float: "right"}}>
+        <div className="row justify-content-center">
+          <div className="col-2">
+            <h3>Contractors</h3>
+          </div>
+          <div className="col-10">
+            <div className="" style={{float: "right"}}>
               <select className="form-control">
                 <option value="" selected disabled>
                   --- Choose Status ---
