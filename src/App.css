@@ -46,4 +46,9 @@
   .hide {
     display: none;
   }
+  .mob-w {
+    background: red!important;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

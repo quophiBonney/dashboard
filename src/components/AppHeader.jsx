@@ -69,7 +69,7 @@ const AppHeader = ({toggleSidebar}) => {
               </div>
             </div>
 
-            <div className="col-6 hide">
+            <div className="col-6 col-xs-12">
               <div className="d-flex justify-content-center">
                 <div className="w-100">
                   <input
@@ -85,7 +85,7 @@ const AppHeader = ({toggleSidebar}) => {
                     }}
                   />
                 </div>
-                <div className="w-50">
+                <div className="w-50 hide">
                   <select
                     className="w-100"
                     style={{
@@ -107,7 +107,7 @@ const AppHeader = ({toggleSidebar}) => {
                 </div>
               </div>
             </div>
-            <div className="col-4 card border-0 bg-light">
+            <div className="col-4 float-right flex-end text-end border-0 bg-light">
               <div className="ms-auto align-items-center">
                 <Dropdown overlay={menu} trigger={["click"]}>
                   <Tooltip title="Username">
