@@ -71,7 +71,7 @@ const AppHeader = ({toggleSidebar}) => {
 
             <div className="col-6 col-xs-12">
               <div className="d-flex justify-content-center">
-                <div className="w-100">
+                <div className="w-100 hide">
                   <input
                     type="search"
                     placeholder="Search client, contractor or supervisor"
@@ -85,7 +85,7 @@ const AppHeader = ({toggleSidebar}) => {
                     }}
                   />
                 </div>
-                <div className="w-50 hide">
+                <div className="w-50">
                   <select
                     className="w-100"
                     style={{
