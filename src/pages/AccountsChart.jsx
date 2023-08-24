@@ -1,5 +1,6 @@
 import React from "react";
-import {Pie} from "react-chartjs-2";
+import Chart from "chart.js/auto";
+import {Doughnut} from "react-chartjs-2";
 function AccountsChart() {
   const labels = ["Active Clients", "Active Contractors"];
   const data = {
@@ -7,7 +8,7 @@ function AccountsChart() {
     datasets: [
       {
         label: "My first dataset",
-        backgroundColor: "teal",
+        backgroundColor: ["teal", "lightseagreen"],
         borderColor: "lavender",
         data: [85, 15],
       },
@@ -15,7 +16,7 @@ function AccountsChart() {
   };
   return (
     <>
-      <Pie data={data} />
+      <Doughnut data={data} />
     </>
   );
 }

@@ -1,21 +1,8 @@
-import React, {useState} from "react";
-import {
-  Layout,
-  Avatar,
-  Button,
-  Menu,
-  Dropdown,
-  Modal,
-  Space,
-  Typography,
-  Badge,
-  Tooltip,
-  Divider,
-} from "antd";
+import React from "react";
+import {Layout, Avatar, Button, Menu, Dropdown, Badge, Tooltip} from "antd";
 import {BiMenuAltRight} from "react-icons/bi";
-import {BellFilled, SettingFilled, UserOutlined} from "@ant-design/icons";
-import {Link} from "react-router-dom";
-import {BsBell, BsLock, BsPerson, BsPower} from "react-icons/bs";
+import {BellFilled, UserOutlined} from "@ant-design/icons";
+import {BsLock, BsPerson, BsPower} from "react-icons/bs";
 const {Header} = Layout;
 const AppHeader = ({toggleSidebar}) => {
   const messages = (
@@ -66,7 +53,7 @@ const AppHeader = ({toggleSidebar}) => {
     </Menu>
   );
   return (
-    <Header className="container-fluid bg-light fixed-top">
+    <Header className="container-fluid bg-light">
       <div className="row justify-content-between align-items-center">
         <div className="col-12">
           <div className="d-flex">
@@ -84,7 +71,7 @@ const AppHeader = ({toggleSidebar}) => {
 
             <div className="col-6">
               <div className="d-flex justify-content-center">
-                <div class="w-100">
+                <div className="w-100">
                   <input
                     type="search"
                     placeholder="Search client, contractor or supervisor"
@@ -98,7 +85,7 @@ const AppHeader = ({toggleSidebar}) => {
                     }}
                   />
                 </div>
-                <div class="w-50 hide">
+                <div className="w-50 hide">
                   <select
                     className="w-100"
                     style={{
@@ -110,7 +97,7 @@ const AppHeader = ({toggleSidebar}) => {
                       textAlign: "center",
                     }}
                   >
-                    <option selected disabled>
+                    <option defaultValue={"Choose role"} disabled>
                       Choose Role
                     </option>
                     <option value="">Client</option>

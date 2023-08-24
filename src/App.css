@@ -34,9 +34,6 @@
 .toggleBtn:hover {
   cursor: pointer;
 }
-.space-btn {
-  margin-top: 65px;
-}
 .ant-drawer-title {
   color: #fff!important;
 }

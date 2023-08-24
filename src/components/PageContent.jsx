@@ -1,9 +1,9 @@
 import React from "react";
 import AppRoutes from "./AppRoutes";
 
-const PageContent = ({}) => {
+const PageContent = () => {
   return (
-    <div className="space-btn">
+    <div>
       <AppRoutes />
     </div>
   );

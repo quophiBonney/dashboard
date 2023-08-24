@@ -1,5 +1,6 @@
 import React from "react";
-import {Pie} from "react-chartjs-2";
+import Chart from "chart.js/auto";
+import {Doughnut} from "react-chartjs-2";
 function BidsChart() {
   const labels = ["Accepted Bids", "Rejected Bids"];
   const data = {
@@ -7,7 +8,7 @@ function BidsChart() {
     datasets: [
       {
         label: "My first dataset",
-        backgroundColor: "teal",
+        backgroundColor: ["teal", "lightseagreen"],
         borderColor: "lavender",
         data: [60, 40],
       },
@@ -15,7 +16,7 @@ function BidsChart() {
   };
   return (
     <>
-      <Pie data={data} />
+      <Doughnut data={data} />
     </>
   );
 }

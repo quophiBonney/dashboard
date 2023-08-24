@@ -4,7 +4,6 @@ import JobsChart from "./JobsChart";
 import BidsChart from "./BidsChart";
 import ProjectsChart from "./ProjectsChart";
 import AccountsChart from "./AccountsChart";
-import BarChart from "./BarChart";
 const Dashboard = () => {
   return (
     <div>
@@ -40,11 +39,6 @@ const Dashboard = () => {
               <Typography.Title level={4} className="mt-2">
                 Accounts
               </Typography.Title>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-12 text-center mt-3">
-            <div className="card shadow px-5 py-3">
-              <BarChart />
             </div>
           </div>
         </div>

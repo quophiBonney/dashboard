@@ -1,22 +1,25 @@
 import React from "react";
-import Chartjs from "chart.js/auto";
-import {Pie} from "react-chartjs-2";
+import Chart from "chart.js/auto";
+import {Doughnut} from "react-chartjs-2";
 function ProjectsChart() {
   const labels = ["Projects In Progress", "Projects Completed"];
   const data = {
     labels: labels,
     datasets: [
       {
-        label: "My first dataset",
-        backgroundColor: "teal",
+        backgroundColor: ["teal", "lightseagreen"],
         borderColor: "lavender",
         data: [75, 25],
       },
     ],
   };
+  const options = {
+    responsive: true,
+    maintainAspectRatio: true,
+  };
   return (
     <>
-      <Pie data={data} />
+      <Doughnut data={data} options={options} />
     </>
   );
 }
