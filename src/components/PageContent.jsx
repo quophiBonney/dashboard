@@ -1,9 +1,9 @@
 import React from "react";
 import AppRoutes from "./AppRoutes";
 
-const PageContent = ({toggleSidebar}) => {
+const PageContent = ({}) => {
   return (
-    <div>
+    <div className="space-btn">
       <AppRoutes />
     </div>
   );

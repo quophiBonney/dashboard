@@ -1,6 +1,9 @@
 import React from "react";
 import {Typography} from "antd";
-import LineChart from "./LineChart";
+import JobsChart from "./JobsChart";
+import BidsChart from "./BidsChart";
+import ProjectsChart from "./ProjectsChart";
+import AccountsChart from "./AccountsChart";
 import BarChart from "./BarChart";
 const Dashboard = () => {
   return (
@@ -9,43 +12,38 @@ const Dashboard = () => {
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-              <hr className="bg-light" />
-              <p>20/12/2023</p>
+              <ProjectsChart />
+              <Typography.Title level={4} className="mt-2">
+                Projects
+              </Typography.Title>
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-              <hr className="bg-light" />
-              <p>20/12/2023</p>
+              <BidsChart />
+              <Typography.Title level={4} className="mt-2">
+                Bids
+              </Typography.Title>
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-              <hr className="bg-light" />
-              <p>20/12/2023</p>
+              <JobsChart />
+              <Typography.Title level={4} className="mt-2">
+                Jobs
+              </Typography.Title>
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-5 py-3">
-              <Typography.Title level={4}>Active Users</Typography.Title>
-              <p className="figure">25K</p>
-              <hr className="bg-light" />
-              <p>20/12/2023</p>
+              <AccountsChart />
+              <Typography.Title level={4} className="mt-2">
+                Accounts
+              </Typography.Title>
             </div>
           </div>
-          <div className="col-12 text-center mt-3">
-            <div className="card shadow px-5 py-2">
-              <LineChart />
-            </div>
-          </div>
-          <div className="col-12 text-center mt-3">
-            <div className="card shadow px-5 py-2">
+          <div className="col-sm-12 col-md-12 col-lg-12 text-center mt-3">
+            <div className="card shadow px-5 py-3">
               <BarChart />
             </div>
           </div>

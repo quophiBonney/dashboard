@@ -34,7 +34,16 @@
 .toggleBtn:hover {
   cursor: pointer;
 }
-
+.space-btn {
+  margin-top: 65px;
+}
+.ant-drawer-title {
+  color: #fff!important;
+}
+.ant-menu-item-icon, .ant-menu-title-content:hover {
+   opacity: 0.6;
+   color: #fff!important;
+}
 
 @media screen and (max-width: 768px){
   .hide {

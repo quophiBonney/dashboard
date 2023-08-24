@@ -1,15 +1,16 @@
 import React from "react";
 import {Menu, Drawer, Button} from "antd";
 import {Link} from "react-router-dom";
-import {BsActivity, BsPerson, BsDash, BsTable} from "react-icons/bs";
-import {BiSolidHome, BiSolidTime} from "react-icons/bi";
+import {BsPerson, BsTable} from "react-icons/bs";
+import {BiSolidHome} from "react-icons/bi";
 
 const SideMenu = ({drawerVisible, onCloseDrawer}) => {
   return (
     <>
       <Drawer
         style={{background: "teal"}}
-        title="Menu"
+        className="space-btn"
+        title="BuildBridge Admin Panel"
         placement="left"
         closable={false}
         onClose={onCloseDrawer}
@@ -27,35 +28,6 @@ const SideMenu = ({drawerVisible, onCloseDrawer}) => {
               Dashboard
             </Link>
           </Menu.Item>
-          <Menu.SubMenu icon={<BsActivity />} title="Charts">
-            <Menu.Item>
-              <Link
-                to="/bar-chart"
-                onClick={onCloseDrawer}
-                className="text-decoration-none"
-              >
-                Bar Chart
-              </Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link
-                to="/line-chart"
-                onClick={onCloseDrawer}
-                className="text-decoration-none"
-              >
-                Line Chart
-              </Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link
-                to="/pie-chart"
-                onClick={onCloseDrawer}
-                className="text-decoration-none"
-              >
-                Pie Chart
-              </Link>
-            </Menu.Item>
-          </Menu.SubMenu>
           <Menu.Item icon={<BsTable />}>
             <Link
               to="/analytics"
@@ -94,39 +66,6 @@ const SideMenu = ({drawerVisible, onCloseDrawer}) => {
               </Link>
             </Menu.Item>
           </Menu.SubMenu>
-          <Menu.Item
-            key="/communication"
-            onClick={onCloseDrawer}
-            icon={<BsTable />}
-          >
-            <Link to="/communication" className="text-decoration-none">
-              Communcation
-            </Link>
-          </Menu.Item>
-          <Menu.SubMenu
-            key="projectManagement"
-            icon={<BsPerson />}
-            title="Project Mgt"
-          >
-            <Menu.Item key="/active-jobs" icon={<BsTable />}>
-              <Link
-                to="/active-jobs"
-                onClick={onCloseDrawer}
-                className="text-decoration-none"
-              >
-                Active Jobs
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="/contractors" icon={<BsPerson />}>
-              <Link
-                to="/contractors"
-                onClick={onCloseDrawer}
-                className="text-decoration-none"
-              >
-                Projects
-              </Link>
-            </Menu.Item>
-          </Menu.SubMenu>
           <Menu.SubMenu
             key="projectManagement"
             icon={<BsPerson />}
@@ -152,7 +91,7 @@ const SideMenu = ({drawerVisible, onCloseDrawer}) => {
             </Menu.Item>
           </Menu.SubMenu>
         </Menu>
-        <div className="container mt-5">
+        <div className="container mt-2">
           <Button className="w-100" onClick={onCloseDrawer}>
             Close
           </Button>
