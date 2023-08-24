@@ -69,7 +69,7 @@ const AppHeader = ({toggleSidebar}) => {
               </div>
             </div>
 
-            <div className="col-6">
+            <div className="col-6 hide">
               <div className="d-flex justify-content-center">
                 <div className="w-100">
                   <input
@@ -85,7 +85,7 @@ const AppHeader = ({toggleSidebar}) => {
                     }}
                   />
                 </div>
-                <div className="w-50 hide">
+                <div className="w-50">
                   <select
                     className="w-100"
                     style={{
