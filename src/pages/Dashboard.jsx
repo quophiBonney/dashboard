@@ -10,7 +10,7 @@ const Dashboard = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
-            <div className="card shadow px-3 py-2">
+            <div className="card shadow px-2 py-2">
               <ProjectsChart />
               <Typography.Title level={4} className="mt-2">
                 Projects
@@ -18,7 +18,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
-            <div className="card shadow px-3 py-2">
+            <div className="card shadow px-2 py-2">
               <BidsChart />
               <Typography.Title level={4} className="mt-2">
                 Bids
@@ -26,7 +26,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
-            <div className="card shadow px-3 py-2">
+            <div className="card shadow px-2 py-2">
               <JobsChart />
               <Typography.Title level={4} className="mt-2">
                 Jobs
@@ -34,7 +34,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
-            <div className="card shadow px-3 py-2">
+            <div className="card shadow px-2 py-2">
               <AccountsChart />
               <Typography.Title level={4} className="mt-2">
                 Accounts
