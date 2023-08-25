@@ -16,17 +16,6 @@ function ProjectsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 12,
-          },
-        },
-        pointStyle: "circle",
-        radius: 5, // Adjust the size as needed
-      },
-    },
   };
   return (
     <>
