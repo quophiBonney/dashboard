@@ -14,7 +14,7 @@ const SideMenu = ({collapsed}) => {
       style={{backgroundColor: "teal"}}
     >
       <Menu mode="inline">
-        <Menu.Item key="dashboard" icon={<BiSolidHome />}>
+        <Menu.Item key="/" icon={<BiSolidHome />}>
           <Link to="/" className="text-decoration-none">
             Dashboard
           </Link>

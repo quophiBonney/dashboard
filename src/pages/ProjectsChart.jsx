@@ -2,7 +2,7 @@ import React from "react";
 import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
 function ProjectsChart() {
-  const labels = ["Projects In Progress", "Projects Completed"];
+  const labels = ["Progress", "Completed"];
   const data = {
     labels: labels,
     datasets: [
@@ -16,8 +16,14 @@ function ProjectsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
-    legend: {
-      labelLayout: "singleLine",
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 5.5,
+          },
+        },
+      },
     },
   };
   return (

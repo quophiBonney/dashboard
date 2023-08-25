@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useLocation} from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Analytics from "../pages/Analytics";
 import Contractors from "../pages/Contractors";
@@ -7,6 +7,8 @@ import LineChart from "../pages/LineChart";
 import BarChart from "../pages/BarChart";
 import PieChart from "../pages/PieChart";
 import Table from "../pages/Table";
+import Login from "../pages/Login";
+import Home from "../pages/Home";
 const AppRoutes = () => {
   return (
     <div>

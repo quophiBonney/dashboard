@@ -2,12 +2,12 @@ import React from "react";
 import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
 function JobsChart() {
-  const labels = ["Active Jobs", "Closed Jobs"];
+  const labels = ["Jobs", "Completed"];
   const data = {
     labels: labels,
     datasets: [
       {
-        label: "My first dataset",
+        label: "Job Records",
         backgroundColor: ["teal", "lightseagreen"],
         borderColor: "lavender",
         data: [70, 30],
@@ -17,8 +17,14 @@ function JobsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
-    legend: {
-      labelLayout: "singleLine",
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 7,
+          },
+        },
+      },
     },
   };
   return (

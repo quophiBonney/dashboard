@@ -3,22 +3,29 @@ import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
 function AccountsChart() {
   const [data, setData] = useState({
-    labels: ["Active Clients", "Active Contractors"],
+    labels: ["Clients", "Contractors"],
     datasets: [
       {
-        label: "Number of Users",
-        data: [100, 50, 25],
+        label: "Figure",
+        data: [70, 30],
         backgroundColor: ["teal", "lightseagreen"],
       },
     ],
   });
 
-  const [options, setOptions] = useState({
-    labelLayout: "singleLine",
-    legend: {
-      labelLayout: "singleLine",
+  const options = {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 6,
+          },
+        },
+      },
     },
-  });
+  };
   return (
     <>
       <Doughnut data={data} options={options} />

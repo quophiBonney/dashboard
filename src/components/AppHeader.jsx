@@ -3,6 +3,7 @@ import {Layout, Avatar, Button, Menu, Dropdown, Badge, Tooltip} from "antd";
 import {BiMenuAltRight} from "react-icons/bi";
 import {BellFilled, UserOutlined} from "@ant-design/icons";
 import {BsLock, BsPerson, BsPower} from "react-icons/bs";
+import {Link} from "react-router-dom";
 const {Header} = Layout;
 const AppHeader = ({toggleSidebar}) => {
   const messages = (
@@ -45,10 +46,10 @@ const AppHeader = ({toggleSidebar}) => {
         </div>
       </Menu.Item>
       <Menu.Item>
-        <div>
+        <Link to="/login">
           <BsPower className="m-2" />
           Logout
-        </div>
+        </Link>
       </Menu.Item>
     </Menu>
   );
