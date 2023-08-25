@@ -1,5 +1,5 @@
 import React from "react";
-import {Bar} from "react-chartjs-2";
+import {Pie} from "react-chartjs-2";
 const labels = [
   "January",
   "February",
@@ -18,7 +18,7 @@ const data = {
   datasets: [
     {
       label: "Engagement Chart",
-      backgroundColor: "teal",
+      backgroundColor: ["teal", "lightseagreen", "pink"],
       borderColor: "teal",
       data: [30, 20, 60, 50, 60, 90, 85, 65, 30, 100, 80, 75],
     },
@@ -28,16 +28,19 @@ const options = {
   responsive: true,
   maintainAspectRatio: true,
 };
-const BarChart = () => {
+const PieChart = () => {
   return (
     <div className="container-fluid">
       <div className="row justify-content-center">
-        <div className="col-sm-12 col-md-12 col-lg-12 mt-2">
-          <Bar data={data} options={options} />
+        <div className="col-sm-12 col-md-5 col-lg-6 mt-2">
+          <Pie data={data} options={options} />
+        </div>
+        <div className="col-sm-12 col-md-5 col-lg-6 mt-2">
+          <Pie data={data} options={options} />
         </div>
       </div>
     </div>
   );
 };
 
-export default BarChart;
+export default PieChart;

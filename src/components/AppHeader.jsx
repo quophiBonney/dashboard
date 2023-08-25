@@ -53,7 +53,7 @@ const AppHeader = ({toggleSidebar}) => {
     </Menu>
   );
   return (
-    <Header className="container-fluid bg-light">
+    <Header className="container-fluid bg-light fixed-top">
       <div className="row justify-content-between align-items-center">
         <div className="col-12">
           <div className="d-flex">

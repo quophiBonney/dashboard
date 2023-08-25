@@ -2,7 +2,7 @@ import React from "react";
 import {Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
 import {BsActivity, BsPerson, BsTable} from "react-icons/bs";
-import {BiSolidHome} from "react-icons/bi";
+import {BiBarChart, BiLineChart, BiPieChart, BiSolidHome} from "react-icons/bi";
 const {Sider} = Layout;
 
 const SideMenu = ({collapsed}) => {
@@ -10,7 +10,7 @@ const SideMenu = ({collapsed}) => {
     <Sider
       collapsible
       collapsed={collapsed}
-      className="sidebar"
+      className="sidebar space-btn"
       style={{backgroundColor: "teal"}}
     >
       <Menu mode="inline">
@@ -25,6 +25,23 @@ const SideMenu = ({collapsed}) => {
             Analytics
           </Link>
         </Menu.Item>
+        <Menu.SubMenu key="charts" icon={<BiBarChart />} title="Charts">
+          <Menu.Item key="/bar-chart" icon={<BiBarChart />}>
+            <Link to="/bar-chart" className="text-decoration-none">
+              Bar Chart
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/pie-chart" icon={<BiPieChart />}>
+            <Link to="/pie-chart" className="text-decoration-none">
+              Pie Chart
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/line-chart" icon={<BiLineChart />}>
+            <Link to="/line-chart" className="text-decoration-none">
+              Line Chart
+            </Link>
+          </Menu.Item>
+        </Menu.SubMenu>
         <Menu.SubMenu
           key="bidsContract"
           icon={<BsPerson />}

@@ -41,7 +41,18 @@
    opacity: 0.6;
    color: #fff!important;
 }
-
+.space-btn {
+  margin-top: 65px;
+}
+.chartjs-render-monitor ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chartjs-render-monitor li {
+  margin-right: 20px;
+}
 @media screen and (max-width: 768px){
   .hide {
     display: none;

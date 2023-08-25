@@ -3,7 +3,7 @@ import AppRoutes from "./AppRoutes";
 
 const PageContent = () => {
   return (
-    <div>
+    <div className="space-btn">
       <AppRoutes />
     </div>
   );

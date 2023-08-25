@@ -1,22 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
 function AccountsChart() {
-  const labels = ["Active Clients", "Active Contractors"];
-  const data = {
-    labels: labels,
+  const [data, setData] = useState({
+    labels: ["Active Clients", "Active Contractors"],
     datasets: [
       {
-        label: "My first dataset",
+        label: "Number of Users",
+        data: [100, 50, 25],
         backgroundColor: ["teal", "lightseagreen"],
-        borderColor: "lavender",
-        data: [85, 15],
       },
     ],
-  };
+  });
+
+  const [options, setOptions] = useState({
+    labelLayout: "singleLine",
+    legend: {
+      labelLayout: "singleLine",
+    },
+  });
   return (
     <>
-      <Doughnut data={data} />
+      <Doughnut data={data} options={options} />
     </>
   );
 }

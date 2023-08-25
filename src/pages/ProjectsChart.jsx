@@ -16,6 +16,9 @@ function ProjectsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
+    legend: {
+      labelLayout: "singleLine",
+    },
   };
   return (
     <>

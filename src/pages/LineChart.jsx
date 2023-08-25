@@ -1,27 +1,46 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import {Line} from "react-chartjs-2";
-const labels = ["January", "February", "March", "April", "May", "June"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 const data = {
   labels: labels,
   datasets: [
     {
-      label: "My first dataset",
-      backgroundColor: "teal",
+      label: "Total Revenue(Monthly)",
+      backgroundColor: ["teal"],
       borderColor: "teal",
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [20, 40, 65, 45, 75, 75, 80, 85, 50, 90, 70, 45],
     },
   ],
+};
+const options = {
+  responsive: true,
+  maintainAspectRatio: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+  },
 };
 const LineChart = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-12 col-md-9 col-lg-8 mt-5">
-          <Line data={data} style={{width: "400px", height: "400px"}} />
-        </div>
-        <div className="col-sm-12 col-md-3 col-lg-3 mt-5">
-          <Line data={data} style={{width: "400px", height: "400px"}} />
+        <div className="col-sm-12 col-md-12 col-lg-12 mt-5">
+          <Line data={data} options={options} />
         </div>
       </div>
     </div>
