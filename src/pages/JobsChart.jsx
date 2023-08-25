@@ -17,15 +17,6 @@ function JobsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 7,
-          },
-        },
-      },
-    },
   };
   return (
     <>

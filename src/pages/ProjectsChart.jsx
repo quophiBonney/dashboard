@@ -20,9 +20,11 @@ function ProjectsChart() {
       legend: {
         labels: {
           font: {
-            size: 5.5,
+            size: 12,
           },
         },
+        pointStyle: "circle",
+        radius: 5, // Adjust the size as needed
       },
     },
   };

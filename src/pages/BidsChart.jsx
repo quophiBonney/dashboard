@@ -17,15 +17,6 @@ function BidsChart() {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
-    plugins: {
-      legend: {
-        labels: {
-          font: {
-            size: 6,
-          },
-        },
-      },
-    },
   };
   return (
     <>
