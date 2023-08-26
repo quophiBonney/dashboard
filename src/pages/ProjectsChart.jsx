@@ -1,6 +1,6 @@
 import React from "react";
-import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
+
 function ProjectsChart() {
   const labels = ["Progress", "Completed"];
   const data = {
@@ -13,10 +13,12 @@ function ProjectsChart() {
       },
     ],
   };
+
   const options = {
     responsive: true,
     maintainAspectRatio: true,
   };
+
   return (
     <>
       <Doughnut data={data} options={options} />
