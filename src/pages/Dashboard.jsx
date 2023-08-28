@@ -30,30 +30,31 @@ const Dashboard = () => {
               <AccountsChart />
             </div>
           </div>
-          <div className="col-sm-12 col-md-9 col-lg-9 text-center mt-3">
-            <div className="card px-2 py-2">
+          <div className="col-sm-12 col-md-9 col-lg-9 text-center mt-3 d-flex flex-column">
+            <div className="card px-2 py-2 h-auto flex-grow-1">
               <BarChart />
             </div>
           </div>
-          <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3">
-            <div className="card px-2 py-2 mb-3">
+          <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3 d-flex flex-column">
+            <div className="card px-2 py-2 border-0 h-50 flex-grow-1 mb-2">
               <BarChart />
             </div>
-            <div className="card px-2 py-2">
+            <div className="card px-2 py-2 border-0 h-50 flex-grow-1">
               <LineChart />
             </div>
           </div>
-          <div className="col-sm-12 col-md-9 col-lg-9 text-center mt-3">
-            <div className="card px-2 py-2">
+          {/** Chart Two**/}
+          <div className="col-sm-12 col-md-9 col-lg-9 text-center mt-3 d-flex flex-column mb-3">
+            <div className="card px-2 py-2 h-auto flex-grow-1">
               <LineChart />
             </div>
           </div>
-          <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3">
-            <div className="card px-2 py-2 mb-3">
-              <LineChart />
-            </div>
-            <div className="card px-2 py-2">
+          <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3 d-flex flex-column mb-3">
+            <div className="card px-2 py-2 border-0 h-50 flex-grow-1">
               <BarChart />
+            </div>
+            <div className="card px-2 py-2 border-0 h-50 flex-grow-1 mt-2">
+              <LineChart />
             </div>
           </div>
         </div>
