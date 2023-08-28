@@ -56,8 +56,8 @@ const AppHeader = ({toggleSidebar}) => {
   return (
     <Header className="container-fluid bg-light fixed-top">
       <div className="row justify-content-between align-items-center">
-        <div className="col-2">
-          <div className="ms-auto">
+        <div className="row">
+          <div className="col-2">
             <Button
               className="border-0 text-white"
               onClick={toggleSidebar}
@@ -66,68 +66,67 @@ const AppHeader = ({toggleSidebar}) => {
               <BiMenuAltRight size={25} style={{color: "teal"}} />
             </Button>
           </div>
-        </div>
-
-        <div className="col-6 col-xs-12">
-          <div className="d-flex justify-content-center">
-            <div className="w-100 hide">
-              <input
-                type="search"
-                placeholder="Search client, contractor or supervisor"
-                className=" w-100 "
-                style={{
-                  outline: "none",
-                  border: "1px solid lavender",
-                  borderRadius: "5px",
-                  height: "40px",
-                  textAlign: "center",
-                }}
-              />
-            </div>
-            <div className="w-50">
-              <select
-                className="w-100"
-                style={{
-                  outline: "none",
-                  marginLeft: "5px",
-                  height: "40px",
-                  borderRadius: "5px",
-                  border: "1px solid lavender",
-                  textAlign: "center",
-                }}
-              >
-                <option defaultValue={"Choose role"} disabled>
-                  Choose Role
-                </option>
-                <option value="">Client</option>
-                <option value="">Contractor</option>
-                <option value="">Supervisor</option>
-              </select>
+          <div className="col-8 col-xs-12">
+            <div className="d-flex justify-content-center">
+              <div className="w-100 hide">
+                <input
+                  type="search"
+                  placeholder="Search client, contractor or supervisor"
+                  className="w-100"
+                  style={{
+                    outline: "none",
+                    border: "1px solid lavender",
+                    borderRadius: "5px",
+                    height: "40px",
+                    textAlign: "center",
+                  }}
+                />
+              </div>
+              <div className="w-50">
+                <select
+                  className="w-100"
+                  style={{
+                    outline: "none",
+                    marginLeft: "5px",
+                    height: "40px",
+                    borderRadius: "5px",
+                    border: "1px solid lavender",
+                    textAlign: "center",
+                  }}
+                >
+                  <option defaultValue={"Choose role"} disabled>
+                    Choose Role
+                  </option>
+                  <option value="">Client</option>
+                  <option value="">Contractor</option>
+                  <option value="">Supervisor</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-4 float-right flex-end text-end border-0 bg-light">
-          <div className="ms-auto align-items-center">
-            <Dropdown overlay={menu} trigger={["click"]}>
-              <Tooltip title="Username">
-                <Button
-                  className="rounded-pill"
-                  style={{color: "teal"}}
-                  icon={<UserOutlined />}
-                ></Button>
-              </Tooltip>
-            </Dropdown>
-            <Dropdown overlay={messages} trigger={["click"]} className="m-2">
-              <Tooltip title="Messages">
-                <Badge count={10}>
+          <div className="col-2 text-end">
+            <div className="ms-auto align-items-center">
+              <Dropdown overlay={menu} trigger={["click"]}>
+                <Tooltip title="Username">
                   <Button
                     className="rounded-pill"
                     style={{color: "teal"}}
-                    icon={<BellFilled />}
-                  />
-                </Badge>
-              </Tooltip>
-            </Dropdown>
+                    icon={<UserOutlined />}
+                  ></Button>
+                </Tooltip>
+              </Dropdown>
+              <Dropdown overlay={messages} trigger={["click"]} className="m-2">
+                <Tooltip title="Messages">
+                  <Badge count={10}>
+                    <Button
+                      className="rounded-pill"
+                      style={{color: "teal"}}
+                      icon={<BellFilled />}
+                    />
+                  </Badge>
+                </Tooltip>
+              </Dropdown>
+            </div>
           </div>
         </div>
       </div>
