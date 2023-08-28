@@ -94,20 +94,6 @@ const Contractors = () => {
     <>
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <div className="col-2">
-            <h3>Contractors</h3>
-          </div>
-          <div className="col-10">
-            <div className="" style={{float: "right"}}>
-              <select className="form-control">
-                <option value="" selected disabled>
-                  --- Choose Status ---
-                </option>
-                <option value="">Verified</option>
-                <option value="">Non-Verified</option>
-              </select>
-            </div>
-          </div>
           <div className="col-12">
             <AntdTable columns={columns} dataSource={data} scroll={{x: true}} />
           </div>

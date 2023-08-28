@@ -1,6 +1,7 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
+import JobsWrapper from "./JobsWrapper";
 function JobsChart() {
   const labels = ["Jobs", "Completed"];
   const data = {
@@ -10,10 +11,14 @@ function JobsChart() {
         label: "Job Records",
         backgroundColor: ["teal", "lightseagreen"],
         borderColor: "lavender",
-        data: [70, 30],
+        data: [40, 60],
       },
     ],
   };
+  const totalJobs = data.datasets[0].data.reduce(
+    (sum, value) => sum + value,
+    0
+  );
   const options = {
     responsive: true,
     maintainAspectRatio: true,
@@ -21,6 +26,7 @@ function JobsChart() {
   return (
     <>
       <Doughnut data={data} options={options} />
+      <JobsWrapper totalJobs={totalJobs} />
     </>
   );
 }

@@ -14,29 +14,46 @@ const SideMenu = ({collapsed}) => {
       style={{backgroundColor: "teal"}}
     >
       <Menu mode="inline">
-        <Menu.Item key="/" icon={<BiSolidHome />}>
+        <Menu.Item key="/" style={{color: "white"}} icon={<BiSolidHome />}>
           <Link to="/" className="text-decoration-none">
             Dashboard
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="analytics" icon={<BsTable />}>
+        <Menu.Item key="analytics" style={{color: "white"}} icon={<BsTable />}>
           <Link to="/analytics" className="text-decoration-none">
             Analytics
           </Link>
         </Menu.Item>
-        <Menu.SubMenu key="charts" icon={<BiBarChart />} title="Charts">
-          <Menu.Item key="/bar-chart" icon={<BiBarChart />}>
+        <Menu.SubMenu
+          key="charts"
+          style={{color: "white"}}
+          icon={<BiBarChart />}
+          title="Charts"
+        >
+          <Menu.Item
+            key="/bar-chart"
+            style={{color: "white"}}
+            icon={<BiBarChart />}
+          >
             <Link to="/bar-chart" className="text-decoration-none">
               Bar Chart
             </Link>
           </Menu.Item>
-          <Menu.Item key="/pie-chart" icon={<BiPieChart />}>
+          <Menu.Item
+            key="/pie-chart"
+            style={{color: "white"}}
+            icon={<BiPieChart />}
+          >
             <Link to="/pie-chart" className="text-decoration-none">
               Pie Chart
             </Link>
           </Menu.Item>
-          <Menu.Item key="/line-chart" icon={<BiLineChart />}>
+          <Menu.Item
+            key="/line-chart"
+            style={{color: "white"}}
+            icon={<BiLineChart />}
+          >
             <Link to="/line-chart" className="text-decoration-none">
               Line Chart
             </Link>
@@ -47,34 +64,59 @@ const SideMenu = ({collapsed}) => {
           icon={<BsPerson />}
           title="Bids & Contract"
         >
-          <Menu.Item key="allBids" icon={<BsTable />}>
+          <Menu.Item key="allBids" style={{color: "white"}} icon={<BsTable />}>
             <Link to="/bids" className="text-decoration-none">
               All Bids
             </Link>
           </Menu.Item>
-          <Menu.Item key="contractors" icon={<BsTable />}>
+          <Menu.Item
+            key="contractors"
+            style={{color: "white"}}
+            icon={<BsTable />}
+          >
             <Link to="/contractors" className="text-decoration-none">
               Contractors
             </Link>
           </Menu.Item>
-          <Menu.Item key="notification" icon={<BsPerson />}>
+          <Menu.Item
+            key="notification"
+            style={{color: "white"}}
+            icon={<BsPerson />}
+          >
             <Link to="/notification" className="text-decoration-none">
               Notification
             </Link>
           </Menu.Item>
         </Menu.SubMenu>
-        <Menu.Item key="communication" icon={<BsTable />}>
+        <Menu.Item
+          key="communication"
+          style={{color: "white"}}
+          icon={<BsTable />}
+        >
           <Link to="/communication" className="text-decoration-none">
             Communication
           </Link>
         </Menu.Item>
-        <Menu.SubMenu key="projectMgt" icon={<BsPerson />} title="Project Mgt">
-          <Menu.Item key="activeJobs" icon={<BsTable />}>
+        <Menu.SubMenu
+          key="projectMgt"
+          style={{color: "white"}}
+          icon={<BsPerson />}
+          title="Project Mgt"
+        >
+          <Menu.Item
+            key="activeJobs"
+            style={{color: "white"}}
+            icon={<BsTable />}
+          >
             <Link to="/active-jobs" className="text-decoration-none">
               Active Jobs
             </Link>
           </Menu.Item>
-          <Menu.Item key="projects" icon={<BsPerson />}>
+          <Menu.Item
+            key="projects"
+            style={{color: "white"}}
+            icon={<BsPerson />}
+          >
             <Link to="/projects" className="text-decoration-none">
               Projects
             </Link>

@@ -37,10 +37,28 @@
 .ant-drawer-title {
   color: #fff!important;
 }
-.ant-menu-item-icon, .ant-menu-title-content:hover {
-   opacity: 0.6;
-   color: #fff!important;
+.ant-menu-item {
+  background: transparent!important;
+  color: #fff;
 }
+.ant-menu-sub {
+  
+  background: teal!important;
+}
+.ant-menu-icon {
+  color: teal!important;
+}
+.ant-menu-item:hover {
+  background: #fff!important;
+  color: teal!important;
+}
+.ant-menu-title-content a {
+  color: #fff!important;
+}
+.ant-menu-title-content a:hover {
+  color: teal!important;
+}
+
 .space-btn {
   margin-top: 65px;
 }

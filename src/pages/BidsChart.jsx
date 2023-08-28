@@ -1,7 +1,8 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import {Doughnut} from "react-chartjs-2";
-function BidsChart() {
+import BidsWrapper from "./BidsWrapper";
+function BidsChart({}) {
   const labels = ["Accepted", "Rejected"];
   const data = {
     labels: labels,
@@ -14,6 +15,10 @@ function BidsChart() {
       },
     ],
   };
+  const totalBids = data.datasets[0].data.reduce(
+    (sum, value) => sum + value,
+    0
+  );
   const options = {
     responsive: true,
     maintainAspectRatio: true,
@@ -21,6 +26,7 @@ function BidsChart() {
   return (
     <>
       <Doughnut data={data} options={options} />
+      <BidsWrapper totalBids={totalBids} />
     </>
   );
 }
