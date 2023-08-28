@@ -36,10 +36,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3 d-flex flex-column">
-            <div className="card px-2 py-2 border-0 h-50 flex-grow-1 mb-2">
+            <div className="card px-2 py-2 h-50 flex-grow-1 mb-2">
               <BarChart />
             </div>
-            <div className="card px-2 py-2 border-0 h-50 flex-grow-1">
+            <div className="card px-2 py-2 h-50 flex-grow-1">
               <LineChart />
             </div>
           </div>
@@ -50,10 +50,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-3 col-lg-3 text-center mt-3 d-flex flex-column mb-3">
-            <div className="card px-2 py-2 border-0 h-50 flex-grow-1">
+            <div className="card px-2 py-2 h-50 flex-grow-1">
               <BarChart />
             </div>
-            <div className="card px-2 py-2 border-0 h-50 flex-grow-1 mt-2">
+            <div className="card px-2 py-2 h-50 flex-grow-1 mt-2">
               <LineChart />
             </div>
           </div>
