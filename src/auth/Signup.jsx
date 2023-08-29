@@ -8,8 +8,17 @@ function Signup() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-sm-12 col-md-6 col-lg-6">
-            <form>
-              <div className="d-flex justify-content-between">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="100"
+            >
+              <h3 className="text-center">Complete Your Registration</h3>
+              <p className="text-center">
+                Fill the form the with your personal details to complete your
+                registration.
+              </p>
+              <form>
                 <div className="form-group">
                   <label htmlFor="first name">
                     First Name<sup className="text-danger">*</sup>
@@ -21,7 +30,7 @@ function Signup() {
                     className="form-control w-100"
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group mt-2">
                   <label htmlFor="Last name">
                     Last Name<sup className="text-danger">*</sup>
                   </label>
@@ -32,86 +41,91 @@ function Signup() {
                     className="form-control w-100"
                   />
                 </div>
-              </div>
-
-              <div className="form-group mt-2">
-                <label htmlFor="Email">
-                  Email<sup className="text-danger">*</sup>
-                </label>
-                <input
-                  type="text"
-                  onChange=""
-                  placeholder="jane.doe@mail.com"
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group mt-2">
-                <label htmlFor="Phone">
-                  Phone<sup className="text-danger">*</sup>
-                </label>
-                <input
-                  type="number"
-                  onChange=""
-                  placeholder="123456789"
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group mt-2">
-                <label htmlFor="Password">
-                  Passwrod<sup className="text-danger">*</sup>
-                </label>
-                <input
-                  type="password"
-                  onChange=""
-                  placeholder="Build@2023"
-                  className="form-control"
-                />
-              </div>
-              <div className="d-flex align-items-center justify-content-between">
-                <div className="mt-2">
-                  <input type="checkbox" />
-                  Remember me?
+                <div className="form-group mt-2">
+                  <label htmlFor="Email">
+                    Email<sup className="text-danger">*</sup>
+                  </label>
+                  <input
+                    type="text"
+                    onChange=""
+                    placeholder="jane.doe@mail.com"
+                    className="form-control"
+                  />
                 </div>
-                <div className="mt-2">
-                  <p className="">
-                    Already a member?
-                    <Link to="/auth/login" className="text-decoration-none">
-                      Login
-                    </Link>
-                  </p>
+                <div className="form-group mt-2">
+                  <label htmlFor="Phone">
+                    Phone<sup className="text-danger">*</sup>
+                  </label>
+                  <input
+                    type="number"
+                    onChange=""
+                    placeholder="123456789"
+                    className="form-control"
+                  />
                 </div>
-              </div>
-              <div className="d-flex align-items-center justify-content-between">
-                <div className="mt-2">
-                  {/* <input
+                <div className="form-group mt-2">
+                  <label htmlFor="Password">
+                    Passwrod<sup className="text-danger">*</sup>
+                  </label>
+                  <input
+                    type="password"
+                    onChange=""
+                    placeholder="Build@2023"
+                    className="form-control"
+                  />
+                </div>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="mt-2">
+                    <input type="checkbox" />
+                    Remember me?
+                  </div>
+                  <div className="mt-2">
+                    <p className="">
+                      Already a member?
+                      <Link to="/auth/login" className="text-decoration-none">
+                        Login
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="mt-2">
+                    {/* <input
                     type="submit"
                     value="Signup"
                     className="btn"
                     style={{background: "teal", color: "#fff"}}
                   /> */}
-                  <Link
-                    to="/auth/login"
-                    className="btn text-decoration-none"
-                    style={{background: "teal", color: "#fff"}}
-                  >
-                    Signup
-                  </Link>
-                </div>
-                <div className="mt-2">
-                  <p className="">
                     <Link
                       to="/auth/login"
-                      className="btn btn-log-into btn-outline-primary text-primary text-decoration"
+                      className="btn text-decoration-none"
+                      style={{background: "teal", color: "#fff"}}
                     >
-                      Log Into Account
+                      Signup
                     </Link>
-                  </p>
+                  </div>
+                  <div className="mt-2">
+                    <p className="">
+                      <Link
+                        to="/auth/login"
+                        className="btn btn-log-into btn-outline-primary text-primary text-decoration"
+                      >
+                        Log Into Account
+                      </Link>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6">
-            <img src={SignupSvg} className="img-fluid" />
+          <div className="col-sm-12 col-md-6 col-lg-6 hide">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="300"
+            >
+              <img src={SignupSvg} className="img-fluid" />
+            </div>
           </div>
         </div>
       </div>

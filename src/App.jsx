@@ -3,9 +3,12 @@ import {Layout} from "antd";
 import AppHeader from "./components/AppHeader";
 import SideMenu from "./components/SideMenu";
 import PageContent from "./components/PageContent";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import "./App.css";
 
 const App = () => {
+  AOS.init();
   const [collapsed, setCollapsed] = useState(false);
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
