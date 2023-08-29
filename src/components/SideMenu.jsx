@@ -1,11 +1,20 @@
 import React from "react";
 import {Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
-import {BsActivity, BsPerson, BsTable} from "react-icons/bs";
+import {BsPerson, BsTable} from "react-icons/bs";
+import {useLocation} from "react-router-dom";
 import {BiBarChart, BiLineChart, BiPieChart, BiSolidHome} from "react-icons/bi";
 const {Sider} = Layout;
 
 const SideMenu = ({collapsed}) => {
+  const location = useLocation();
+  if (
+    location.pathname === "/" ||
+    location.pathname === "/auth/login" ||
+    location.pathname === "/auth/signup"
+  ) {
+    return null;
+  }
   return (
     <Sider
       collapsible

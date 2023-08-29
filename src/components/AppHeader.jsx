@@ -3,9 +3,18 @@ import {Layout, Avatar, Button, Menu, Dropdown, Badge, Tooltip} from "antd";
 import {BiMenuAltRight} from "react-icons/bi";
 import {BellFilled, UserOutlined} from "@ant-design/icons";
 import {BsLock, BsPerson, BsPower} from "react-icons/bs";
+import {useLocation} from "react-router-dom";
 import {Link} from "react-router-dom";
 const {Header} = Layout;
 const AppHeader = ({toggleSidebar}) => {
+  const location = useLocation();
+  if (
+    location.pathname === "/" ||
+    location.pathname === "/auth/login" ||
+    location.pathname === "/auth/signup"
+  ) {
+    return null;
+  }
   const messages = (
     <Menu style={{width: "250px"}}>
       <div className="card border-0 text-center">
@@ -115,7 +124,11 @@ const AppHeader = ({toggleSidebar}) => {
                   ></Button>
                 </Tooltip>
               </Dropdown>
-              <Dropdown overlay={messages} trigger={["click"]} className="m-2">
+              <Dropdown
+                overlay={messages}
+                trigger={["click"]}
+                className="m-2 hide"
+              >
                 <Tooltip title="Messages">
                   <Badge count={10}>
                     <Button
