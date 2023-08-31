@@ -1,14 +1,34 @@
 import React from "react";
 import "./Auth.css";
 import {Link} from "react-router-dom";
-import SignupSvg from "../assets/signup.svg";
+import SignupSvg from "../assets/engineer_svg.svg";
+import logo from "../assets/logo3.png";
 function Signup() {
   return (
     <div className="signupContainer">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-sm-12 col-md-6 col-lg-6">
+      <div className="container-fluid">
+        <div className="row">
+          <div>
+            <img
+              src={logo}
+              style={{width: "100px", height: "100px"}}
+              alt="BuildBridge logo"
+              className="img-fluid"
+            />
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 mt-5 hide">
             <div
+              className="mt-5"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              data-aos-delay="300"
+            >
+              <img src={SignupSvg} className="img-fluid" />
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 mt-2">
+            <div
+              className="px-4"
               data-aos="zoom-in"
               data-aos-duration="2000"
               data-aos-delay="100"
@@ -19,60 +39,77 @@ function Signup() {
                 registration.
               </p>
               <form>
-                <div className="form-group">
-                  <label htmlFor="first name">
-                    First Name<sup className="text-danger">*</sup>
-                  </label>
-                  <input
-                    type="text"
-                    onChange=""
-                    placeholder="John"
-                    className="form-control w-100"
-                  />
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="form-group w-50">
+                    <label htmlFor="first name">
+                      First Name<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="text"
+                      onChange=""
+                      placeholder="John"
+                      className="form-control"
+                    />
+                  </div>
+                  <div className="form-group w-50 m-2">
+                    <label htmlFor="Last name">
+                      Last Name<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="text"
+                      onChange=""
+                      placeholder="Doe"
+                      className="form-control"
+                    />
+                  </div>
                 </div>
-                <div className="form-group mt-2">
-                  <label htmlFor="Last name">
-                    Last Name<sup className="text-danger">*</sup>
-                  </label>
-                  <input
-                    type="text"
-                    onChange=""
-                    placeholder="Doe"
-                    className="form-control w-100"
-                  />
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="form-group w-50">
+                    <label htmlFor="Email">
+                      Email<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="text"
+                      onChange=""
+                      placeholder="jane.doe@mail.com"
+                      className="form-control"
+                    />
+                  </div>
+                  <div className="form-group w-50 m-2">
+                    <label htmlFor="Phone">
+                      Phone<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="number"
+                      onChange=""
+                      placeholder="123456789"
+                      className="form-control"
+                    />
+                  </div>
                 </div>
-                <div className="form-group mt-2">
-                  <label htmlFor="Email">
-                    Email<sup className="text-danger">*</sup>
-                  </label>
-                  <input
-                    type="text"
-                    onChange=""
-                    placeholder="jane.doe@mail.com"
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group mt-2">
-                  <label htmlFor="Phone">
-                    Phone<sup className="text-danger">*</sup>
-                  </label>
-                  <input
-                    type="number"
-                    onChange=""
-                    placeholder="123456789"
-                    className="form-control"
-                  />
-                </div>
-                <div className="form-group mt-2">
-                  <label htmlFor="Password">
-                    Passwrod<sup className="text-danger">*</sup>
-                  </label>
-                  <input
-                    type="password"
-                    onChange=""
-                    placeholder="Build@2023"
-                    className="form-control"
-                  />
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="form-group w-50">
+                    <label htmlFor="Password">
+                      Password<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="password"
+                      onChange=""
+                      placeholder="Build@2023"
+                      className="form-control"
+                    />
+                  </div>
+                  <div className="form-group w-50 m-2">
+                    <label htmlFor="Confirm Password">
+                      Confirm Password<sup className="text-danger">*</sup>
+                    </label>
+                    <input
+                      type="password"
+                      onChange=""
+                      placeholder="Build@2023"
+                      className="form-control"
+                    />
+                  </div>
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="mt-2">
@@ -116,15 +153,6 @@ function Signup() {
                   </div>
                 </div>
               </form>
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 hide">
-            <div
-              data-aos="zoom-in"
-              data-aos-duration="2000"
-              data-aos-delay="300"
-            >
-              <img src={SignupSvg} className="img-fluid" />
             </div>
           </div>
         </div>

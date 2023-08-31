@@ -18,8 +18,8 @@ const data = {
   datasets: [
     {
       label: "Engagement Chart",
-      backgroundColor: "teal",
-      borderColor: "teal",
+      backgroundColor: ["lightseagreen", "teal"],
+      borderColor: ["lightseagreen", "teal"],
       data: [30, 20, 60, 50, 60, 90, 85, 65, 30, 100, 80, 75],
     },
   ],

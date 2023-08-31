@@ -58,10 +58,6 @@
 .ant-menu-title-content a:hover {
   color: teal!important;
 }
-
-.space-btn {
-  margin-top: 65px;
-}
 .chartjs-render-monitor ul {
   display: flex;
   list-style: none;

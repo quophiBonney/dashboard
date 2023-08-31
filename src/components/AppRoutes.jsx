@@ -7,9 +7,9 @@ import LineChart from "../pages/LineChart";
 import BarChart from "../pages/BarChart";
 import PieChart from "../pages/PieChart";
 import Table from "../pages/Table";
-import Home from "../pages/Home";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
+import Clients from "../pages/Clients";
 const AppRoutes = () => {
   return (
     <div>
@@ -20,6 +20,7 @@ const AppRoutes = () => {
         <Route path="/contractors" element={<Contractors />} />
         <Route path="/pie-chart" element={<PieChart />} />
         <Route path="/line-chart" element={<LineChart />} />
+        <Route path="/clients" element={<Clients />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/bar-chart" element={<BarChart />} />

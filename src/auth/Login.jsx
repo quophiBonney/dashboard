@@ -1,14 +1,23 @@
 import React from "react";
 import "./Auth.css";
 import {Link} from "react-router-dom";
-import EngineerSvg from "../assets/engineer_svg.svg";
+import EngineerSvg from "../assets/welcome.svg";
+import logo from "../assets/logo3.png";
 function Login() {
   return (
-    <div className="LoginContainer">
-      <div className="container">
-        <div className="row align-items-center">
+    <div className="signupContainer">
+      <div className="container-fluid">
+        <div className="row">
+          <div>
+            <img
+              src={logo}
+              style={{width: "100px", height: "100px"}}
+              alt="BuildBridge logo"
+              className="img-fluid"
+            />
+          </div>
           <div
-            className="col-sm-12 col-md-6 col-lg-6 hide"
+            className="col-sm-12 col-md-8 col-lg-8 mt-3 hide"
             style={{overflow: "hidden"}}
           >
             <div
@@ -20,18 +29,20 @@ function Login() {
             </div>
           </div>
           <div
-            className="col-sm-12 col-md-6 col-lg-6"
+            className="col-sm-12 col-md-4 col-lg-4 px-4 mt-3"
             style={{overflow: "hidden"}}
           >
             <div
+              className="mt-5"
               data-aos="slide-left"
               data-aos-duration="2000"
               data-aos-delay="300"
             >
               <h3 className="text-center">Welcome Back</h3>
               <p className="fs-6 text-center">
-                To keep connected with us please login with your personal
-                information by email address and password
+                This admin dashboard is for authorized personnel only. Only
+                authorized users of <strong>BuildBridge</strong> are allowed
+                access. Unauthorized access is strictly prohibited.
               </p>
               <form>
                 <div className="form-group mt-2">

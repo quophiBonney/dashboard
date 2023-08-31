@@ -1,7 +1,8 @@
 import React from "react";
 import {Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
-import {BsPerson, BsTable} from "react-icons/bs";
+import {BsPerson, BsSearch, BsTable} from "react-icons/bs";
+import {GrUserWorker} from "react-icons/gr";
 import {useLocation} from "react-router-dom";
 import {BiBarChart, BiLineChart, BiPieChart, BiSolidHome} from "react-icons/bi";
 const {Sider} = Layout;
@@ -19,8 +20,8 @@ const SideMenu = ({collapsed}) => {
     <Sider
       collapsible
       collapsed={collapsed}
-      className="sidebar space-btn"
-      style={{backgroundColor: "teal"}}
+      className="sidebar"
+      style={{backgroundColor: "teal", marginTop: "60px"}}
     >
       <Menu mode="inline">
         <Menu.Item key="/" style={{color: "white"}} icon={<BiSolidHome />}>
@@ -28,43 +29,19 @@ const SideMenu = ({collapsed}) => {
             Dashboard
           </Link>
         </Menu.Item>
-
-        <Menu.Item key="analytics" style={{color: "white"}} icon={<BsTable />}>
-          <Link to="/analytics" className="text-decoration-none">
-            Analytics
-          </Link>
-        </Menu.Item>
         <Menu.SubMenu
-          key="charts"
+          key="users"
           style={{color: "white"}}
-          icon={<BiBarChart />}
-          title="Charts"
+          icon={<BsPerson />}
+          title="User Role"
         >
           <Menu.Item
-            key="/bar-chart"
+            key="client"
             style={{color: "white"}}
-            icon={<BiBarChart />}
+            icon={<GrUserWorker />}
           >
-            <Link to="/bar-chart" className="text-decoration-none">
-              Bar Chart
-            </Link>
-          </Menu.Item>
-          <Menu.Item
-            key="/pie-chart"
-            style={{color: "white"}}
-            icon={<BiPieChart />}
-          >
-            <Link to="/pie-chart" className="text-decoration-none">
-              Pie Chart
-            </Link>
-          </Menu.Item>
-          <Menu.Item
-            key="/line-chart"
-            style={{color: "white"}}
-            icon={<BiLineChart />}
-          >
-            <Link to="/line-chart" className="text-decoration-none">
-              Line Chart
+            <Link to="/clients" className="text-decoration-none">
+              Clients
             </Link>
           </Menu.Item>
         </Menu.SubMenu>

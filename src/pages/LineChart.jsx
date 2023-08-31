@@ -20,7 +20,7 @@ const data = {
   datasets: [
     {
       label: "Total Revenue(Monthly)",
-      backgroundColor: ["teal"],
+      backgroundColor: ["lightseagreen", "teal"],
       borderColor: "teal",
       data: [20, 40, 65, 45, 75, 75, 80, 85, 50, 90, 70, 45],
     },
