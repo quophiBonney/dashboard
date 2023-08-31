@@ -16,7 +16,7 @@ function Signup() {
               className="img-fluid"
             />
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 mt-5 hide">
+          <div className="col-sm-12 col-md-12 col-lg-6 mt-5 hide">
             <div
               className="mt-5"
               data-aos="zoom-in"
@@ -26,9 +26,9 @@ function Signup() {
               <img src={SignupSvg} className="img-fluid" />
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 mt-2">
+          <div className="col-sm-12 col-md-12 col-lg-6 mt-2">
             <div
-              className="px-4"
+              className=""
               data-aos="zoom-in"
               data-aos-duration="2000"
               data-aos-delay="100"
@@ -112,21 +112,19 @@ function Signup() {
                   </div>
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
-                  <div className="mt-2">
+                  <div className="">
                     <input type="checkbox" />
                     Remember me?
                   </div>
-                  <div className="mt-2">
-                    <p className="">
-                      Already a member?
-                      <Link to="/auth/login" className="text-decoration-none">
-                        Login
-                      </Link>
-                    </p>
+                  <div className="">
+                    Already a member?
+                    <Link to="/auth/login" className="text-decoration-none">
+                      Login
+                    </Link>
                   </div>
                 </div>
-                <div className="d-flex align-items-center justify-content-between">
-                  <div className="mt-2">
+                <div className="d-flex align-items-center justify-content-between mt-3 mb-3">
+                  <div className="">
                     {/* <input
                     type="submit"
                     value="Signup"
@@ -141,15 +139,13 @@ function Signup() {
                       Signup
                     </Link>
                   </div>
-                  <div className="mt-2">
-                    <p className="">
-                      <Link
-                        to="/auth/login"
-                        className="btn btn-log-into btn-outline-primary text-primary text-decoration"
-                      >
-                        Log Into Account
-                      </Link>
-                    </p>
+                  <div className="">
+                    <Link
+                      to="/auth/login"
+                      className="btn btn-log-into btn-outline-primary text-primary text-decoration"
+                    >
+                      Log Into Account
+                    </Link>
                   </div>
                 </div>
               </form>

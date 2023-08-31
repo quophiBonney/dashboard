@@ -17,7 +17,7 @@ function Login() {
             />
           </div>
           <div
-            className="col-sm-12 col-md-8 col-lg-8 mt-3 hide"
+            className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 mt-3 hide"
             style={{overflow: "hidden"}}
           >
             <div
@@ -29,7 +29,7 @@ function Login() {
             </div>
           </div>
           <div
-            className="col-sm-12 col-md-4 col-lg-4 px-4 mt-3"
+            className="col-sm-12 col-sm-12 col-md-12 col-lg-5 px-4 mt-3"
             style={{overflow: "hidden"}}
           >
             <div
