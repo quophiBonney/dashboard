@@ -63,8 +63,8 @@ const AppHeader = ({toggleSidebar}) => {
     </Menu>
   );
   return (
-    <Header className="container-fluid bg-light fixed-top">
-      <div className="row justify-content-between align-items-center">
+    <Header className="container-fluid bg-light">
+      <div className="row justify-content-between">
         <div className="row">
           <div className="col-2">
             <Button
@@ -76,7 +76,7 @@ const AppHeader = ({toggleSidebar}) => {
             </Button>
           </div>
           <div className="col-8 col-xs-12">
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-between">
               <div className="w-100 hide">
                 <input
                   type="search"
@@ -91,7 +91,7 @@ const AppHeader = ({toggleSidebar}) => {
                   }}
                 />
               </div>
-              <div className="w-50">
+              <div className="w-50 hide">
                 <select
                   className="w-100"
                   style={{

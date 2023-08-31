@@ -1,26 +1,27 @@
 import React from "react";
 import "./Auth.css";
 import {Link} from "react-router-dom";
-import EngineerSvg from "../assets/welcome.svg";
+import EngineerSvg from "../assets/engineer_svg.svg";
 import logo from "../assets/logo3.png";
 function Login() {
   return (
     <div className="signupContainer">
-      <div className="container-fluid">
+      <div className="container-fluid" style={{height: "100vh"}}>
         <div className="row">
           <div>
             <img
               src={logo}
-              style={{width: "100px", height: "100px"}}
+              style={{width: "80px", height: "80px"}}
               alt="BuildBridge logo"
               className="img-fluid"
             />
           </div>
           <div
-            className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 mt-3 hide"
+            className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 mt-5 hide"
             style={{overflow: "hidden"}}
           >
             <div
+              className="mt-2"
               data-aos="slide-right"
               data-aos-duration="2000"
               data-aos-delay="100"
@@ -98,14 +99,12 @@ function Login() {
                     </Link>
                   </div>
                   <div className="mt-2">
-                    <p className="">
-                      <Link
-                        to="/auth/signup"
-                        className="btn btn-log-into btn-outline-secondary text-secondary text-decoration"
-                      >
-                        Create Account
-                      </Link>
-                    </p>
+                    <Link
+                      to="/auth/signup"
+                      className="btn btn-log-into btn-outline-secondary text-secondary text-decoration"
+                    >
+                      Create Account
+                    </Link>
                   </div>
                 </div>
               </form>

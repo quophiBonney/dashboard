@@ -3,7 +3,7 @@ import AppRoutes from "./AppRoutes";
 
 const PageContent = () => {
   return (
-    <div>
+    <div style={{height: "auto"}}>
       <AppRoutes />
     </div>
   );

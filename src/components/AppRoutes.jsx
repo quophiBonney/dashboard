@@ -2,14 +2,14 @@ import React from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Analytics from "../pages/Analytics";
-import Contractors from "../pages/Contractors";
+import Contractors from "../tables/Contractors";
 import LineChart from "../pages/LineChart";
 import BarChart from "../pages/BarChart";
 import PieChart from "../pages/PieChart";
 import Table from "../pages/Table";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
-import Clients from "../pages/Clients";
+import Clients from "../tables/Clients";
 const AppRoutes = () => {
   return (
     <div>

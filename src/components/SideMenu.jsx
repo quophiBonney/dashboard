@@ -4,7 +4,13 @@ import {Link} from "react-router-dom";
 import {BsPerson, BsSearch, BsTable} from "react-icons/bs";
 import {GrUserWorker} from "react-icons/gr";
 import {useLocation} from "react-router-dom";
-import {BiBarChart, BiLineChart, BiPieChart, BiSolidHome} from "react-icons/bi";
+import {
+  BiBarChart,
+  BiLineChart,
+  BiPieChart,
+  BiSolidDashboard,
+  BiSolidHome,
+} from "react-icons/bi";
 const {Sider} = Layout;
 
 const SideMenu = ({collapsed}) => {
@@ -21,11 +27,11 @@ const SideMenu = ({collapsed}) => {
       collapsible
       collapsed={collapsed}
       className="sidebar"
-      style={{backgroundColor: "teal", marginTop: "60px"}}
+      style={{backgroundColor: "teal", height: "100vh"}}
     >
       <Menu mode="inline">
         <Menu.Item key="/" style={{color: "white"}} icon={<BiSolidHome />}>
-          <Link to="/" className="text-decoration-none">
+          <Link to="/dashboard" className="text-decoration-none">
             Dashboard
           </Link>
         </Menu.Item>
@@ -38,10 +44,19 @@ const SideMenu = ({collapsed}) => {
           <Menu.Item
             key="client"
             style={{color: "white"}}
-            icon={<GrUserWorker />}
+            icon={<BiSolidDashboard />}
           >
             <Link to="/clients" className="text-decoration-none">
               Clients
+            </Link>
+          </Menu.Item>
+          <Menu.Item
+            key="contractors"
+            style={{color: "white"}}
+            icon={<BiSolidDashboard />}
+          >
+            <Link to="/contractors" className="text-decoration-none">
+              Contractors
             </Link>
           </Menu.Item>
         </Menu.SubMenu>
@@ -53,15 +68,6 @@ const SideMenu = ({collapsed}) => {
           <Menu.Item key="allBids" style={{color: "white"}} icon={<BsTable />}>
             <Link to="/bids" className="text-decoration-none">
               All Bids
-            </Link>
-          </Menu.Item>
-          <Menu.Item
-            key="contractors"
-            style={{color: "white"}}
-            icon={<BsTable />}
-          >
-            <Link to="/contractors" className="text-decoration-none">
-              Contractors
             </Link>
           </Menu.Item>
           <Menu.Item

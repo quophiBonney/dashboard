@@ -15,10 +15,10 @@ const App = () => {
   };
   return (
     <div>
-      <AppHeader toggleSidebar={toggleSidebar} />
       <Layout style={{minHeight: "100vh"}}>
         <SideMenu collapsed={collapsed} />
         <Layout className="site-layout">
+          <AppHeader toggleSidebar={toggleSidebar} />
           <PageContent />
         </Layout>
       </Layout>

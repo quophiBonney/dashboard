@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Menu, Dropdown} from "antd";
 import {Link} from "react-router-dom";
-import {BsEye, BsPrinter, BsThreeDots} from "react-icons/bs";
+import {BsEye, BsPerson, BsPrinter, BsThreeDots} from "react-icons/bs";
 import {Table as AntdTable, Button} from "antd";
 const Clients = () => {
   const [selectedStatus, setSelectedStatus] = useState("");
@@ -209,7 +209,7 @@ const Clients = () => {
         <span>
           <Dropdown overlay={menu} trigger={["click"]}>
             <Button
-              className="rounded-pill"
+              className="border-0"
               style={{color: "teal"}}
               icon={<BsThreeDots />}
             ></Button>
@@ -225,7 +225,7 @@ const Clients = () => {
       <Menu.Item>
         <div>
           <Link to="/details" className="text-decoration-none text-dark">
-            <BsEye className="m-2" /> View Details
+            <BsPerson className="m-2" /> View Details
           </Link>
         </div>
       </Menu.Item>
@@ -254,39 +254,37 @@ const Clients = () => {
   );
   return (
     <>
-      <div className="container-fluid" style={{marginTop: "60px"}}>
-        <div className="row justify-content-center">
-          <div className="d-flex justify-content-between mt-2 mb-2">
-            <div className="mt-3">
-              <p className="text-secondary fs-6">Total Records: 4</p>
-            </div>
-            <div className="col-2 mt-2">
-              <select
-                className="w-100 py-2 px-3 text-center"
-                style={{
-                  outline: "none",
-                  border: "0",
-                  borderRadius: "5px",
-                  focus: "none",
-                }}
-                onChange={e => handleStatusChange(e.target.value)}
-                value={selectedStatus}
-              >
-                <option value="">All</option>
-                <option value="Active">Active</option>
-                <option value="Inactive">Inactive</option>
-                <option value="Verified">Verified</option>
-                <option value="Non-verified">Non-Verified</option>
-              </select>
-            </div>
+      <div className="container-fluid">
+        <div className="d-flex justify-content-between mt-2 mb-2">
+          <div className="col-sm-3 col-md-2 col-lg-2">
+            <p className="text-secondary fs-6">Total Records: 6</p>
           </div>
-          <div className="col-12">
-            <AntdTable
-              columns={columns}
-              dataSource={filteredData}
-              scroll={{x: true}}
-            />
+          <div className="col-sm-3 col-md-2 col-lg-2">
+            <select
+              className="w-100 py-2"
+              style={{
+                outline: "none",
+                border: "0",
+                borderRadius: "5px",
+                focus: "none",
+              }}
+              onChange={e => handleStatusChange(e.target.value)}
+              value={selectedStatus}
+            >
+              <option value="">All</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+              <option value="Verified">Verified</option>
+              <option value="Non-verified">Non-Verified</option>
+            </select>
           </div>
+        </div>
+        <div className="col-12">
+          <AntdTable
+            columns={columns}
+            dataSource={filteredData}
+            scroll={{x: true}}
+          />
         </div>
       </div>
     </>

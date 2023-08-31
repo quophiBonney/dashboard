@@ -8,7 +8,7 @@ import LineChart from "./LineChart";
 const Dashboard = () => {
   return (
     <div>
-      <div className="container-fluid" style={{marginTop: "60px"}}>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3">
             <div className="card shadow px-2 py-2">
