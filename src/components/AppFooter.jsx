@@ -5,7 +5,8 @@ const AppFooter = () => {
   if (
     location.pathname === "/" ||
     location.pathname === "/auth/login" ||
-    location.pathname === "/auth/signup"
+    location.pathname === "/auth/signup" ||
+    location.pathname === "/password-recovery"
   ) {
     return null;
   }

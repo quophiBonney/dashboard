@@ -11,7 +11,8 @@ const AppHeader = ({toggleSidebar}) => {
   if (
     location.pathname === "/" ||
     location.pathname === "/auth/login" ||
-    location.pathname === "/auth/signup"
+    location.pathname === "/auth/signup" ||
+    location.pathname === "/password-recovery"
   ) {
     return null;
   }
@@ -77,31 +78,31 @@ const AppHeader = ({toggleSidebar}) => {
           </div>
           <div className="col-8 col-xs-12">
             <p className="title">BB Dashboard</p>
-            <div className="d-flex justify-content-between mt-3">
-              <div className="col-6 hide">
+            <div className="d-flex  mt-3">
+              <div className="hide">
                 <form>
                   <div className="input-group">
                     <input
                       type="text"
                       className="form-control"
                       style={{borderRadius: "5px"}}
-                      placeholder="e.g. country, region, state"
+                      placeholder="Search"
                     />
                     <div className="input-group-append">
                       <input
                         type="submit"
                         className="form-control text-light"
-                        style={{background: "teal"}}
+                        style={{background: "teal", marginLeft: "5px"}}
                         value="Search"
                       />
                     </div>
                   </div>
                 </form>
               </div>
-              <div className="col-2 hide">
+              <div className="hide" style={{marginLeft: "40px"}}>
                 <select className="form-control">
                   <option value="" selected>
-                    ---Choose Role---
+                    --- Filter Role ---
                   </option>
                   <option value="">Supervisor</option>
                   <option value="">Client</option>

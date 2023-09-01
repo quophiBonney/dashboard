@@ -16,11 +16,11 @@ function Login() {
           />
         </div>
         <div
-          className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 hide mt-3 text-center px-3"
+          className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 hide mt-3 text-center"
           style={{overflow: "hidden"}}
         >
           <div
-            className=""
+            className="px-4"
             data-aos="slide-right"
             data-aos-duration="2000"
             data-aos-delay="100"
@@ -29,11 +29,11 @@ function Login() {
           </div>
         </div>
         <div
-          className="col-sm-12 col-sm-12 col-md-12 col-lg-5 mt-3  px-3"
+          className="col-sm-12 col-sm-12 col-md-12 col-lg-5 mt-3"
           style={{overflow: "hidden"}}
         >
           <div
-            className=""
+            className="px-4"
             data-aos="slide-left"
             data-aos-duration="2000"
             data-aos-delay="300"
@@ -74,7 +74,7 @@ function Login() {
                 </div>
                 <div className="mt-2">
                   <Link
-                    to="/auth/password-recovery"
+                    to="/password-recovery"
                     className="text-decoration-none text-secondary"
                   >
                     Forgot password?
@@ -83,12 +83,6 @@ function Login() {
               </div>
               <div className="d-flex align-items-center justify-content-between">
                 <div className="mt-2">
-                  {/* <input
-                    type="submit"
-                    value="Login Now"
-                    className="btn"
-                    style={{background: "teal", color: "#fff"}}
-                  /> */}
                   <Link
                     to="/dashboard"
                     className="btn text-decoration-none"

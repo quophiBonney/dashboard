@@ -18,7 +18,8 @@ const SideMenu = ({collapsed}) => {
   if (
     location.pathname === "/" ||
     location.pathname === "/auth/login" ||
-    location.pathname === "/auth/signup"
+    location.pathname === "/auth/signup" ||
+    location.pathname === "/password-recovery"
   ) {
     return null;
   }
@@ -27,7 +28,7 @@ const SideMenu = ({collapsed}) => {
       collapsible
       collapsed={collapsed}
       className=""
-      style={{backgroundColor: "teal"}}
+      style={{backgroundColor: "teal", minHeight: "100vh"}}
     >
       <Menu mode="inline">
         <Menu.Item key="/" style={{color: "white"}} icon={<BiSolidHome />}>

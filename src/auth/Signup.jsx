@@ -21,7 +21,7 @@ function Signup() {
             style={{overflow: "hidden"}}
           >
             <div
-              className="mt-2"
+              className="mt-2 px-4"
               data-aos="fade-in"
               data-aos-duration="2000"
               data-aos-delay="300"
@@ -34,7 +34,7 @@ function Signup() {
             style={{overflow: "hidden"}}
           >
             <div
-              className="mt-3"
+              className="mt-3 px-4"
               data-aos="fade-in"
               data-aos-duration="2000"
               data-aos-delay="100"

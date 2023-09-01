@@ -39,11 +39,6 @@ const Bids = () => {
       key: "currency",
     },
     {
-      title: "MATERIALS",
-      dataIndex: "materials",
-      key: "materials",
-    },
-    {
       title: "STATUS",
       dataIndex: "status",
       key: "status",
@@ -97,7 +92,6 @@ const Bids = () => {
       cidNumber: "238482",
       amount: "2200",
       currency: "Cedis",
-      materials: "Generator",
       duration: "One month",
       status: "accepted",
       submitted: "23/06/2023",
@@ -112,7 +106,6 @@ const Bids = () => {
       cidNumber: "238482",
       amount: "2200",
       currency: "Dollars",
-      materials: "Bulbs",
       duration: "Two weeks",
       status: "submitted",
       submitted: "23/06/2023",
@@ -127,7 +120,6 @@ const Bids = () => {
       cidNumber: "23433",
       amount: "4400",
       currency: "Cedis",
-      materials: "Blocks",
       duration: "One month",
       status: "accepted",
       submitted: "23/06/2023",
@@ -142,7 +134,6 @@ const Bids = () => {
       cidNumber: "238482",
       amount: "2200",
       currency: "Euro",
-      materials: "Blocks",
       duration: "One month",
       status: "submitted",
       submitted: "23/06/2023",
@@ -157,7 +148,6 @@ const Bids = () => {
       cidNumber: "248482",
       amount: "600",
       currency: "Dollars",
-      materials: "Drilling Machine",
       duration: "One month",
       status: "rejected",
       submitted: "23/06/2023",
@@ -172,7 +162,6 @@ const Bids = () => {
       cidNumber: "88982",
       amount: "800",
       currency: "Euro",
-      materials: "Drilling Machine",
       duration: "One month",
       status: "submitted",
       submitted: "23/06/2023",
@@ -232,10 +221,27 @@ const Bids = () => {
     <>
       <div className="container-fluid">
         <div className="d-flex justify-content-between mt-2 mb-2">
-          <div className="col-sm-3 col-md-2 col-lg-2 mt-3">
-            <p className="text-secondary fs-6">Total Records: 6</p>
+          <div>
+            <form>
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  style={{borderRadius: "5px"}}
+                  placeholder="Search eg country, region, city"
+                />
+                <div className="input-group-append">
+                  <input
+                    type="submit"
+                    className="form-control text-light"
+                    style={{background: "teal", marginLeft: "5px"}}
+                    value="Search"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
-          <div className="col-sm-3 col-md-2 col-lg-2 mt-2">
+          <div className="">
             <select
               className="w-100 py-2"
               style={{
@@ -259,7 +265,7 @@ const Bids = () => {
         </div>
         <div className="col-12">
           <AntdTable
-            className="table-stripped"
+            className="zebra-table"
             columns={columns}
             dataSource={filteredData}
             scroll={{x: true}}

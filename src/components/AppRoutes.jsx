@@ -16,6 +16,7 @@ import Jobs from "../tables/Jobs";
 import Bids from "../tables/Bids";
 import Contract from "../tables/Contract";
 import Payment from "../tables/Payment";
+import ForgotPassword from "../auth/ForgotPassword";
 const AppRoutes = () => {
   return (
     <div>
@@ -33,6 +34,7 @@ const AppRoutes = () => {
         <Route path="/payment" element={<Payment />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
+        <Route path="/password-recovery" element={<ForgotPassword />} />
         <Route path="/bar-chart" element={<BarChart />} />
       </Routes>
     </div>
