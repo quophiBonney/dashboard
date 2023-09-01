@@ -76,39 +76,36 @@ const AppHeader = ({toggleSidebar}) => {
             </Button>
           </div>
           <div className="col-8 col-xs-12">
-            <div className="d-flex justify-content-between">
-              <div className="w-100 hide">
-                <input
-                  type="search"
-                  placeholder="Search client, contractor or supervisor"
-                  className="w-100"
-                  style={{
-                    outline: "none",
-                    border: "1px solid lavender",
-                    borderRadius: "5px",
-                    height: "40px",
-                    textAlign: "center",
-                  }}
-                />
+            <p className="title">BB Dashboard</p>
+            <div className="d-flex justify-content-between mt-3">
+              <div className="col-6 hide">
+                <form>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      style={{borderRadius: "5px"}}
+                      placeholder="e.g. country, region, state"
+                    />
+                    <div className="input-group-append">
+                      <input
+                        type="submit"
+                        className="form-control text-light"
+                        style={{background: "teal"}}
+                        value="Search"
+                      />
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div className="w-50 hide">
-                <select
-                  className="w-100"
-                  style={{
-                    outline: "none",
-                    marginLeft: "5px",
-                    height: "40px",
-                    borderRadius: "5px",
-                    border: "1px solid lavender",
-                    textAlign: "center",
-                  }}
-                >
-                  <option defaultValue={"Choose role"} disabled>
-                    Choose Role
+              <div className="col-2 hide">
+                <select className="form-control">
+                  <option value="" selected>
+                    ---Choose Role---
                   </option>
+                  <option value="">Supervisor</option>
                   <option value="">Client</option>
                   <option value="">Contractor</option>
-                  <option value="">Supervisor</option>
                 </select>
               </div>
             </div>

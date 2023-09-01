@@ -1,4 +1,21 @@
+.login-layout .ant-layout {
+    height: auto; /* Override the height set by Ant Design */
+  }
 .btn-log-into:hover {
     opacity: 0.7!important;
     color: lightblue!important;
+}
+.logo-space-signup {
+    margin-bottom: 20px;
+}
+.logo-space-login {
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 767px){
+    .logo-space-login {
+        margin-bottom: 40px;
+    }
+    .logo-space-signup {
+        margin-bottom: 30px;
+    }
 }

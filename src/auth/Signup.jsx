@@ -5,10 +5,10 @@ import EngineerSvg from "../assets/use.svg";
 import logo from "../assets/logo3.png";
 function Signup() {
   return (
-    <div className="signupContainer">
-      <div className="container-fluid" style={{height: "100vh"}}>
-        <div className="row">
-          <div>
+    <div>
+      <div className="container-fluid login-layout">
+        <div className="row" style={{minHeight: "100vh"}}>
+          <div class="logo-space-signup">
             <img
               src={logo}
               style={{width: "80px", height: "80px"}}
@@ -17,11 +17,24 @@ function Signup() {
             />
           </div>
           <div
+            className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 mt-5 text-center hide"
+            style={{overflow: "hidden"}}
+          >
+            <div
+              className="mt-2"
+              data-aos="fade-in"
+              data-aos-duration="2000"
+              data-aos-delay="300"
+            >
+              <img src={EngineerSvg} className="img-fluid" />
+            </div>
+          </div>
+          <div
             className="col-sm-12 col-sm-12 col-md-12 col-lg-5 px-4"
             style={{overflow: "hidden"}}
           >
             <div
-              className="mt-4"
+              className="mt-3"
               data-aos="fade-in"
               data-aos-duration="2000"
               data-aos-delay="100"
@@ -125,19 +138,6 @@ function Signup() {
                   </div>
                 </div>
               </form>
-            </div>
-          </div>
-          <div
-            className="col-sm-xs-12 col-sm-12 col-md-12 col-lg-7 mt-5 hide "
-            style={{overflow: "hidden"}}
-          >
-            <div
-              className="mt-2"
-              data-aos="fade-in"
-              data-aos-duration="2000"
-              data-aos-delay="300"
-            >
-              <img src={EngineerSvg} className="img-fluid" />
             </div>
           </div>
         </div>
