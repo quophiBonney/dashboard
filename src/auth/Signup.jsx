@@ -112,30 +112,20 @@ function Signup() {
                     </Link>
                   </div>
                 </div>
-                <div className="d-flex align-items-center justify-content-between mt-3 mb-3">
-                  <div className="">
-                    {/* <input
+                <div className="mt-3 mb-3">
+                  {/* <input
                     type="submit"
                     value="Signup"
                     className="btn"
                     style={{background: "teal", color: "#fff"}}
                   /> */}
-                    <Link
-                      to="/auth/login"
-                      className="btn text-decoration-none"
-                      style={{background: "teal", color: "#fff"}}
-                    >
-                      Signup
-                    </Link>
-                  </div>
-                  <div className="">
-                    <Link
-                      to="/auth/login"
-                      className="btn btn-log-into btn-outline-primary text-primary text-decoration"
-                    >
-                      Log Into Account
-                    </Link>
-                  </div>
+                  <Link
+                    to="/auth/login"
+                    className="btn text-decoration-none"
+                    style={{background: "teal", color: "#fff"}}
+                  >
+                    Signup Now
+                  </Link>
                 </div>
               </form>
             </div>

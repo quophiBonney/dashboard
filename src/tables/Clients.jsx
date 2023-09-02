@@ -256,7 +256,7 @@ const Clients = () => {
     <>
       <div className="container-fluid">
         <div className="d-flex justify-content-between mt-2 mb-2">
-          <div className="">
+          <div className="hide">
             <form>
               <div className="input-group">
                 <input

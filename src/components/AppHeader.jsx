@@ -79,7 +79,7 @@ const AppHeader = ({toggleSidebar}) => {
           <div className="col-8 col-xs-12">
             <p className="title">BB Dashboard</p>
             <div className="d-flex  mt-3">
-              <div className="hide">
+              <div className="hide w-100">
                 <form>
                   <div className="input-group">
                     <input
@@ -99,7 +99,7 @@ const AppHeader = ({toggleSidebar}) => {
                   </div>
                 </form>
               </div>
-              <div className="hide" style={{marginLeft: "40px"}}>
+              <div className="hide w-50" style={{marginLeft: "40px"}}>
                 <select className="form-control">
                   <option value="" selected>
                     --- Filter Role ---
