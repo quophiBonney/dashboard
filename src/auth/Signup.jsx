@@ -83,7 +83,7 @@ function Signup() {
                     Phone<sup className="text-danger">*</sup>
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     onChange=""
                     placeholder="123456789"
                     className="form-control"
