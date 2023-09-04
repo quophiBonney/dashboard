@@ -1,9 +1,13 @@
 import React from "react";
 import "./Auth.css";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import EngineerSvg from "../assets/use.svg";
 import logo from "../assets/logo3.png";
 function Signup() {
+  const navigate = useNavigate();
+  const home = () => {
+    navigate("/auth/login");
+  };
   return (
     <div>
       <div className="container-fluid login-layout">
@@ -13,7 +17,8 @@ function Signup() {
               src={logo}
               style={{width: "80px", height: "80px"}}
               alt="BuildBridge logo"
-              className="img-fluid"
+              className="img-fluid logo"
+              onClick={home}
             />
           </div>
           <div
@@ -47,7 +52,7 @@ function Signup() {
               <form>
                 <div className="form-group">
                   <label htmlFor="first name">
-                    First Name<sup className="text-danger">*</sup>
+                    Enter Your First Name<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
@@ -58,7 +63,7 @@ function Signup() {
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Last name">
-                    Last Name<sup className="text-danger">*</sup>
+                    Enter Your Last Name<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
@@ -69,7 +74,7 @@ function Signup() {
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Email">
-                    Email<sup className="text-danger">*</sup>
+                    Enter Your Email<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
@@ -80,7 +85,7 @@ function Signup() {
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Phone">
-                    Phone<sup className="text-danger">*</sup>
+                    Enter Your Phone<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
@@ -91,7 +96,7 @@ function Signup() {
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Password">
-                    Password<sup className="text-danger">*</sup>
+                    Enter Your Password<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="password"

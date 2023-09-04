@@ -1,9 +1,14 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import "./Auth.css";
 import {Link} from "react-router-dom";
 import EngineerSvg from "../assets/engineer_svg.svg";
 import logo from "../assets/logo3.png";
 function Login() {
+  const navigate = useNavigate();
+  const home = () => {
+    navigate("/auth/login");
+  };
   return (
     <div className="container-fluid login-layout">
       <div className="row" style={{minHeight: "100vh"}}>
@@ -12,7 +17,8 @@ function Login() {
             src={logo}
             style={{width: "80px", height: "80px"}}
             alt="BuildBridge logo"
-            className="img-fluid"
+            className="img-fluid logo"
+            onClick={home}
           />
         </div>
         <div
@@ -47,7 +53,7 @@ function Login() {
             <form>
               <div className="form-group mt-2">
                 <label htmlFor="Email">
-                  Email<sup className="text-danger">*</sup>
+                  Enter Your Email<sup className="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
@@ -58,7 +64,7 @@ function Login() {
               </div>
               <div className="form-group mt-2">
                 <label htmlFor="Password">
-                  Passwrod<sup className="text-danger">*</sup>
+                  Enter Your Password<sup className="text-danger">*</sup>
                 </label>
                 <input
                   type="password"
