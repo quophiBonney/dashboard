@@ -39,6 +39,11 @@ const Bids = () => {
       key: "currency",
     },
     {
+      title: "MATERIALS",
+      dataIndex: "materials",
+      key: "materials",
+    },
+    {
       title: "STATUS",
       dataIndex: "status",
       key: "status",

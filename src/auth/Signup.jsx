@@ -39,7 +39,7 @@ function Signup() {
             style={{overflow: "hidden"}}
           >
             <div
-              className="mt-3 px-4"
+              className=""
               data-aos="fade-in"
               data-aos-duration="2000"
               data-aos-delay="100"
@@ -52,56 +52,56 @@ function Signup() {
               <form>
                 <div className="form-group">
                   <label htmlFor="first name">
-                    Enter Your First Name<sup className="text-danger">*</sup>
+                    First Name<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
                     onChange=""
-                    placeholder="John"
+                    placeholder="Enter your first name"
                     className="form-control"
                   />
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Last name">
-                    Enter Your Last Name<sup className="text-danger">*</sup>
+                    Last Name<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
                     onChange=""
-                    placeholder="Doe"
+                    placeholder="Enter your last name"
                     className="form-control"
                   />
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Email">
-                    Enter Your Email<sup className="text-danger">*</sup>
+                    Email<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
                     onChange=""
-                    placeholder="jane.doe@mail.com"
+                    placeholder=" Enter your email address"
                     className="form-control"
                   />
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Phone">
-                    Enter Your Phone<sup className="text-danger">*</sup>
+                    Phone<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="text"
                     onChange=""
-                    placeholder="123456789"
+                    placeholder="Enter your phone number"
                     className="form-control"
                   />
                 </div>
                 <div className="form-group mt-2">
                   <label htmlFor="Password">
-                    Enter Your Password<sup className="text-danger">*</sup>
+                    Password<sup className="text-danger">*</sup>
                   </label>
                   <input
                     type="password"
                     onChange=""
-                    placeholder="Build@2023"
+                    placeholder="Enter your password"
                     className="form-control"
                   />
                 </div>

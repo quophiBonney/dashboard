@@ -53,23 +53,23 @@ function Login() {
             <form>
               <div className="form-group mt-2">
                 <label htmlFor="Email">
-                  Enter Your Email<sup className="text-danger">*</sup>
+                  Email<sup className="text-danger">*</sup>
                 </label>
                 <input
                   type="text"
                   onChange=""
-                  placeholder="jane.doe@mail.com"
+                  placeholder="Enter your email"
                   className="form-control"
                 />
               </div>
               <div className="form-group mt-2">
                 <label htmlFor="Password">
-                  Enter Your Password<sup className="text-danger">*</sup>
+                  Password<sup className="text-danger">*</sup>
                 </label>
                 <input
                   type="password"
                   onChange=""
-                  placeholder="Build@2023"
+                  placeholder="Enter your password"
                   className="form-control"
                 />
               </div>

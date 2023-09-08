@@ -62,7 +62,7 @@ function ForgotPassword() {
                   <input
                     type="email"
                     onChange=""
-                    placeholder="buildbridge@gmail.com"
+                    placeholder="Enter your email address"
                     className="form-control"
                   />
                 </div>
