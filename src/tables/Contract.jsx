@@ -16,62 +16,7 @@ const Contract = () => {
   const handleStatusChange = value => {
     setSelectedStatus(value);
   };
-  const data = [
-    {
-      key: "1",
-      idNumber: "238482",
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Male",
-      name: "Stephan Bosu",
-      dob: "04/10/1996",
-      insurance: "23949293",
-      certificate: "Diploma",
-      yib: 2,
-      website: "www.myown.com",
-      primaryPhone: "4934584330",
-      secondaryPhone: "334338483",
-      services: "Graphic Designing",
-      license: "A",
-      address: "B/A 78",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: "20302",
-      status: "Active",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "2",
-      idNumber: "238482",
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Female",
-      name: "Gifty Nyame",
-      dob: "11/08/1995",
-      insurance: "23949293",
-      certificate: "Phd",
-      yib: 2,
-      website: "www.myown.com",
-      primaryPhone: "4934584330",
-      secondaryPhone: "334338483",
-      services: "Plumbing",
-      license: "B",
-      address: "B/A 78",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: "20302",
-      status: "Non-verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-  ];
+  const data = [];
   const filteredData = data.filter(record => {
     if (selectedStatus === "") {
       return true;

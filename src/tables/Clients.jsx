@@ -1,11 +1,17 @@
 import React, {useState} from "react";
 import {Menu, Dropdown} from "antd";
 import {Link} from "react-router-dom";
-import {BsEye, BsPerson, BsPrinter, BsThreeDots} from "react-icons/bs";
+import {Modal} from "react-bootstrap";
+import {BsBell, BsPerson, BsEye, BsThreeDots} from "react-icons/bs";
 import {Table as AntdTable, Button} from "antd";
 const Clients = () => {
+  //Modal state
+  const [show, setShow] = useState(false);
+  //Button to close modal
+  const handleClose = () => setShow(false);
+  //Button to show modal
+  const handleShow = () => setShow(true);
   const [selectedStatus, setSelectedStatus] = useState("");
-
   const handleStatusChange = value => {
     setSelectedStatus(value);
   };
@@ -225,7 +231,7 @@ const Clients = () => {
       <Menu.Item>
         <div>
           <Link to="/details" className="text-decoration-none text-dark">
-            <BsPerson className="m-2" /> View Details
+            <BsPerson className="m-2" /> View Profile
           </Link>
         </div>
       </Menu.Item>
@@ -245,8 +251,8 @@ const Clients = () => {
       </Menu.Item>
       <Menu.Item>
         <div>
-          <Link to="/contracts" className="text-decoration-none text-dark">
-            <BsPrinter className="m-2" /> Print
+          <Link onClick={handleShow} className="text-decoration-none text-dark">
+            <BsBell className="m-2" /> Messages
           </Link>
         </div>
       </Menu.Item>
@@ -304,6 +310,36 @@ const Clients = () => {
             className="zebra-table"
           />
         </div>
+        {/* {Modal to send message} */}
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton className="border-0">
+            <Modal.Title>Send Message</Modal.Title>
+          </Modal.Header>
+          <div className="container">
+            <form>
+              <textarea
+                rows={4}
+                placeholder="Type your message"
+                className="form-control px-2"
+              />
+              <div className="d-flex justify-content-between mt-3 mb-3">
+                <div>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    className="btn"
+                    style={{background: "teal", color: "#fff"}}
+                    value="Send Message"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </Modal>
       </div>
     </>
   );

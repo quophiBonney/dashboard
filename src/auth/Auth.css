@@ -12,14 +12,9 @@
     margin-bottom: 20px;
 }
 .logo-space-login {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width: 767px){
-    .logo-space-login {
-        margin-bottom: 40px;
-    }
-    .logo-space-signup {
-        margin-bottom: 30px;
-    }
+   
 }
