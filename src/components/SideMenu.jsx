@@ -1,7 +1,13 @@
 import React from "react";
 import {Layout, Menu} from "antd";
 import {Link} from "react-router-dom";
-import {BsFillProjectorFill, BsPerson, BsSearch, BsTable} from "react-icons/bs";
+import {
+  BsBell,
+  BsFillProjectorFill,
+  BsPerson,
+  BsSearch,
+  BsTable,
+} from "react-icons/bs";
 import {GrUserWorker} from "react-icons/gr";
 import {useLocation} from "react-router-dom";
 import {
@@ -82,31 +88,11 @@ const SideMenu = ({collapsed}) => {
             Bids
           </Link>
         </Menu.Item>
-        <Menu.SubMenu
-          key="projectMgt"
-          style={{color: "white"}}
-          icon={<BsPerson />}
-          title="Project Mgt"
-        >
-          <Menu.Item
-            key="activeJobs"
-            style={{color: "white"}}
-            icon={<BsTable />}
-          >
-            <Link to="/active-jobs" className="text-decoration-none">
-              Active Jobs
-            </Link>
-          </Menu.Item>
-          <Menu.Item
-            key="projects"
-            style={{color: "white"}}
-            icon={<BsPerson />}
-          >
-            <Link to="/projects" className="text-decoration-none">
-              Projects
-            </Link>
-          </Menu.Item>
-        </Menu.SubMenu>
+        <Menu.Item key="messages" style={{color: "white"}} icon={<BsBell />}>
+          <Link to="/messages" className="text-decoration-none">
+            Messages
+          </Link>
+        </Menu.Item>
       </Menu>
     </Sider>
   );
