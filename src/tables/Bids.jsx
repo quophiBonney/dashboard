@@ -4,14 +4,19 @@ import {Link} from "react-router-dom";
 import {Modal} from "react-bootstrap";
 import {BsBell, BsEye, BsLock, BsThreeDots, BsUnlock} from "react-icons/bs";
 import {Table as AntdTable, Button} from "antd";
-import {BiSolidUserAccount} from "react-icons/bi";
 const Bids = () => {
   //Modal state
   const [show, setShow] = useState(false);
+  const [materials, setMaterials] = useState(false);
+  const [client, setClient] = useState(false);
   //Button to close modal
   const handleClose = () => setShow(false);
+  const handleCloseMaterials = () => setMaterials(false);
+  const handleCloseClient = () => setClient(false);
   //Button to show modal
   const handleShow = () => setShow(true);
+  const handleMessageClient = () => setClient(true);
+  const handleShowMaterials = () => setMaterials(true);
   const [selectedStatus, setSelectedStatus] = useState("");
   const handleStatusChange = value => {
     setSelectedStatus(value);
@@ -37,11 +42,6 @@ const Bids = () => {
       title: "CURRENCY",
       dataIndex: "currency",
       key: "currency",
-    },
-    {
-      title: "MATERIALS",
-      dataIndex: "materials",
-      key: "materials",
     },
     {
       title: "STATUS",
@@ -187,15 +187,11 @@ const Bids = () => {
     <Menu style={{width: "250px"}}>
       <Menu.Item>
         <div>
-          <Link to="/view-materials" className="text-decoration-none text-dark">
+          <Link
+            onClick={handleShowMaterials}
+            className="text-decoration-none text-dark"
+          >
             <BsEye className="m-2" /> View Materials
-          </Link>
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-        <div>
-          <Link onClick={handleShow} className="text-decoration-none text-dark">
-            <BsBell className="m-2" /> Messages
           </Link>
         </div>
       </Menu.Item>
@@ -210,6 +206,23 @@ const Bids = () => {
         <div>
           <Link to="/deactivate-bid" className="text-decoration-none text-dark">
             <BsUnlock className="m-2" /> Deactivate Bid
+          </Link>
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+        <div>
+          <Link onClick={handleShow} className="text-decoration-none text-dark">
+            <BsUnlock className="m-2" /> Message Contractor
+          </Link>
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+        <div>
+          <Link
+            onClick={handleMessageClient}
+            className="text-decoration-none text-dark"
+          >
+            <BsUnlock className="m-2" /> Message Client
           </Link>
         </div>
       </Menu.Item>
@@ -276,10 +289,47 @@ const Bids = () => {
             scroll={{x: true}}
           />
         </div>
+        {/* {Modal for view materials table} */}
+        <Modal show={materials} onHide={handleCloseMaterials}>
+          <div className="container">
+            <table className="table table-striped mt-3">
+              <thead className="text-center">
+                <th className="text-uppercase fs-6 fw-bold">Name</th>
+                <th className="text-uppercase fs-6 fw-bold">Unit</th>
+                <th className="text-uppercase fs-6 fw-bold">Quantity</th>
+                <th className="text-uppercase fs-6 fw-bold">Price</th>
+              </thead>
+              <tbody className="text-center">
+                <tr>
+                  <td>Pipe</td>
+                  <td>50</td>
+                  <td>2</td>
+                  <td>$200</td>
+                </tr>
+                <tr>
+                  <td>Pipe</td>
+                  <td>50</td>
+                  <td>2</td>
+                  <td>$200</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="d-flex justify-content-between mt-3 mb-3">
+              <div>
+                <button
+                  className="btn btn-danger"
+                  onClick={handleCloseMaterials}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </Modal>
         {/* {Modal to send message} */}
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton className="border-0">
-            <Modal.Title>Send Message</Modal.Title>
+            <Modal.Title>Message Contractor</Modal.Title>
           </Modal.Header>
           <div className="container">
             <form>
@@ -291,6 +341,35 @@ const Bids = () => {
               <div className="d-flex justify-content-between mt-3 mb-3">
                 <div>
                   <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    className="btn"
+                    style={{background: "teal", color: "#fff"}}
+                    value="Send Message"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </Modal>
+        <Modal show={client} onHide={handleCloseClient}>
+          <Modal.Header closeButton className="border-0">
+            <Modal.Title>Message Client</Modal.Title>
+          </Modal.Header>
+          <div className="container">
+            <form>
+              <textarea
+                rows={4}
+                placeholder="Type your message"
+                className="form-control px-2"
+              />
+              <div className="d-flex justify-content-between mt-3 mb-3">
+                <div>
+                  <Button variant="secondary" onClick={handleCloseClient}>
                     Close
                   </Button>
                 </div>

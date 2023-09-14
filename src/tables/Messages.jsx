@@ -8,12 +8,15 @@ const Messages = () => {
   //Modal state
   const [sender, setSender] = useState(false);
   const [recipient, setRecipient] = useState(false);
+  const [newUser, setNewUser] = useState(false);
   //Button to close modal
   const handleClose = () => setRecipient(false);
   const handleCloseSender = () => setSender(false);
+  const handleCloseNewUser = () => setNewUser(false);
   //Button to show modal
   const messageToRecipent = () => setRecipient(true);
   const messageToSender = () => setSender(true);
+  const messageNewUser = () => setNewUser(true);
   const [selectedStatus, setSelectedStatus] = useState("");
   const handleStatusChange = value => {
     setSelectedStatus(value);
@@ -26,7 +29,7 @@ const Messages = () => {
       senderName: "John Doe",
       recipientName: "Hello World",
       recipientID: 434854,
-      rtID: "John Wack",
+      rtID: 434854,
       message: "Hello world, this is buildbridge",
       subject: "Buildbridge",
       isread: "Yes",
@@ -66,7 +69,7 @@ const Messages = () => {
       key: "recipientID",
     },
     {
-      title: "RTI",
+      title: "REPLY TO",
       dataIndex: "rtID",
       key: "rtID",
     },
@@ -111,7 +114,7 @@ const Messages = () => {
             onClick={messageToSender}
             className="text-decoration-none text-dark"
           >
-            <BsEye className="m-2" /> Message To Sender
+            <BsEye className="m-2" /> Message Sender
           </Link>
         </div>
       </Menu.Item>
@@ -121,7 +124,17 @@ const Messages = () => {
             onClick={messageToRecipent}
             className="text-decoration-none text-dark"
           >
-            <BsEye className="m-2" /> Message To Recipient
+            <BsEye className="m-2" /> Message Recipient
+          </Link>
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+        <div>
+          <Link
+            onClick={messageNewUser}
+            className="text-decoration-none text-dark"
+          >
+            <BsEye className="m-2" /> Message New User
           </Link>
         </div>
       </Menu.Item>
@@ -182,7 +195,7 @@ const Messages = () => {
         {/* {Modal to sender } */}
         <Modal show={sender} onHide={handleCloseSender}>
           <Modal.Header closeButton className="border-0">
-            <Modal.Title>Message To Sender</Modal.Title>
+            <Modal.Title>Message Sender</Modal.Title>
           </Modal.Header>
           <div className="container">
             <form>
@@ -215,7 +228,7 @@ const Messages = () => {
         {/* {Modal To Recipient} */}
         <Modal show={recipient} onHide={handleClose}>
           <Modal.Header closeButton className="border-0">
-            <Modal.Title>Message To Recipient</Modal.Title>
+            <Modal.Title>Message Recipient</Modal.Title>
           </Modal.Header>
           <div className="container">
             <form>
@@ -230,6 +243,39 @@ const Messages = () => {
               <div className="d-flex justify-content-between mt-3 mb-3">
                 <div>
                   <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    className="btn"
+                    style={{background: "teal", color: "#fff"}}
+                    value="Send Message"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </Modal>
+        {/* {Modal To New User} */}
+        <Modal show={newUser} onHide={handleCloseNewUser}>
+          <Modal.Header closeButton className="border-0">
+            <Modal.Title>Message New User</Modal.Title>
+          </Modal.Header>
+          <div className="container">
+            <form>
+              <textarea
+                rows={4}
+                placeholder="Type your message"
+                className="form-control px-2"
+              />
+              <div className="input-group mt-3">
+                <input type="file" className="form-control px-2" />
+              </div>
+              <div className="d-flex justify-content-between mt-3 mb-3">
+                <div>
+                  <Button variant="secondary" onClick={handleCloseNewUser}>
                     Close
                   </Button>
                 </div>
