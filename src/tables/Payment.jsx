@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 import {Modal} from "react-bootstrap";
 import {BsBell, BsEye, BsThreeDots} from "react-icons/bs";
 import {Table as AntdTable, Button} from "antd";
-import {BiSolidUserAccount} from "react-icons/bi";
+import {BiSolidMessage, BiSolidUserAccount} from "react-icons/bi";
+import { AiFillRightCircle, AiFillWarning } from "react-icons/ai";
 const Payment = () => {
   //Modal state
   const [show, setShow] = useState(false);
@@ -19,57 +20,14 @@ const Payment = () => {
   const data = [
     {
       key: "1",
-      idNumber: "238482",
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Male",
-      name: "Stephan Bosu",
-      dob: "04/10/1996",
-      insurance: "23949293",
-      certificate: "Diploma",
-      yib: 2,
-      website: "www.myown.com",
-      primaryPhone: "4934584330",
-      secondaryPhone: "334338483",
-      services: "Graphic Designing",
-      license: "A",
-      address: "B/A 78",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: "20302",
-      status: "Active",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "2",
-      idNumber: "238482",
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Female",
-      name: "Gifty Nyame",
-      dob: "11/08/1995",
-      insurance: "23949293",
-      certificate: "Phd",
-      yib: 2,
-      website: "www.myown.com",
-      primaryPhone: "4934584330",
-      secondaryPhone: "334338483",
-      services: "Plumbing",
-      license: "B",
-      address: "B/A 78",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: "20302",
-      status: "Non-verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
+      contractID: 238482,
+      amount: "4500",
+      currency: "Dollar",
+      paymentDate: "20/03/2023",
+      paymentMethod: "Paypal",
+      status: "Verified",
+      created: "23/04/2023",
+      updated: "24/04/2023"
     },
   ];
   const filteredData = data.filter(record => {
@@ -81,109 +39,29 @@ const Payment = () => {
 
   const columns = [
     {
-      title: "ID NO:",
-      dataIndex: "idNumber",
-      key: "idNumber",
+      title: "CONTRACT ID",
+      dataIndex: "contractID",
+      key: "contractID",
     },
     {
-      title: "TYPE",
-      dataIndex: "idType",
-      key: "idType",
+      title: "AMOUNT",
+      dataIndex: "amount",
+      key: "amount",
     },
     {
-      title: "ISSUER",
-      dataIndex: "idIssuer",
-      key: "idIssuer",
+      title: "CURRENCY",
+      dataIndex: "currency",
+      key: "currency",
     },
     {
-      title: "ID EXP.",
-      dataIndex: "idExpiration",
-      key: "idExpiration",
+      title: "PAYMENT DATE",
+      dataIndex: "paymentDate",
+      key: "paymentDate",
     },
     {
-      title: "GENDER",
-      dataIndex: "gender",
-      key: "gender",
-    },
-    {
-      title: "NAME",
-      dataIndex: "name",
-      key: "name",
-    },
-    {
-      title: "DOB",
-      dataIndex: "dob",
-      key: "dob",
-    },
-    {
-      title: "INSURANCE",
-      dataIndex: "insurance",
-      key: "insurance",
-    },
-    {
-      title: "CERTIFICATE",
-      dataIndex: "certificate",
-      key: "certificate",
-    },
-    {
-      title: "YIB",
-      dataIndex: "yib",
-      key: "yib",
-    },
-    {
-      title: "WEBSITE",
-      dataIndex: "website",
-      key: "website",
-    },
-    {
-      title: "P.PHONE",
-      dataIndex: "primaryPhone",
-      key: "primaryPhone",
-    },
-    {
-      title: "S.PHONE",
-      dataIndex: "secondaryPhone",
-      key: "secondaryPhone",
-    },
-    {
-      title: "SERVICES",
-      dataIndex: "services",
-      key: "services",
-    },
-    {
-      title: "LINCENSE NO:",
-      dataIndex: "license",
-      key: "license",
-    },
-    {
-      title: "ADDRESS",
-      dataIndex: "address",
-      key: "address",
-    },
-    {
-      title: "CITY",
-      dataIndex: "city",
-      key: "city",
-    },
-    {
-      title: "REGION",
-      dataIndex: "region",
-      key: "region",
-    },
-    {
-      title: "STATE",
-      dataIndex: "state",
-      key: "state",
-    },
-    {
-      title: "COUNTRY",
-      dataIndex: "country",
-      key: "country",
-    },
-    {
-      title: "ZIP",
-      dataIndex: "zip",
-      key: "zip",
+      title: "PAYMENT METHOD",
+      dataIndex: "paymentMethod",
+      key: "paymentMethod",
     },
     {
       title: "STATUS",
@@ -191,14 +69,14 @@ const Payment = () => {
       key: "status",
     },
     {
-      title: "CREATED",
-      dataIndex: "dateCreated",
-      key: "dateCreated",
+      title: "CREATED AT",
+      dataIndex: "created",
+      key: "created"
     },
     {
-      title: "UPDATED",
-      dataIndex: "dateUpdated",
-      key: "dateUpdated",
+      title: "UPDATED AT",
+      dataIndex: "updated",
+      key: "updated"
     },
     {
       title: "ACTION",
@@ -222,43 +100,36 @@ const Payment = () => {
     <Menu style={{width: "250px"}}>
       <Menu.Item>
         <div>
-          <Link to="/verified" className="text-decoration-none text-dark">
-            <BiSolidUserAccount className="m-2" /> Verified
-          </Link>
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-        <div>
           <Link onClick={handleShow} className="text-decoration-none text-dark">
-            <BsBell className="m-2" /> Messages
+            <BiSolidMessage className="m-2" /> Message Client
           </Link>
         </div>
       </Menu.Item>
       <Menu.Item>
         <div>
           <Link to="/review" className="text-decoration-none text-dark">
-            <BiSolidUserAccount className="m-2" /> View Reviews
+            <AiFillRightCircle className="m-2" /> Mark Payment
           </Link>
         </div>
       </Menu.Item>
       <Menu.Item>
         <div>
           <Link to="/non-verified" className="text-decoration-none text-dark">
-            <BsEye className="m-2" /> View Portfolio
+            <AiFillWarning className="m-2" /> Mark Payment Pending
           </Link>
         </div>
       </Menu.Item>
       <Menu.Item>
         <div>
           <Link to="/activate" className="text-decoration-none text-dark">
-            <BsEye className="m-2" /> Activate
+            <AiFillRightCircle className="m-2" /> Mark Payment Paid
           </Link>
         </div>
       </Menu.Item>
       <Menu.Item>
         <div>
-          <Link to="/deactivate" className="text-decoration-none text-dark">
-            <BsEye className="m-2" /> Deactivate
+          <Link to="/non-verified" className="text-decoration-none text-dark">
+            <AiFillWarning className="m-2" /> Overdue
           </Link>
         </div>
       </Menu.Item>

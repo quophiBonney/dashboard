@@ -20,11 +20,13 @@ const Contractors = () => {
     {
       key: "1",
       idNumber: "238482",
+      userID: "3043434bb",
       idType: "NHIS",
       idIssuer: "NHIA",
       idExpiration: "20/03/2023",
       gender: "Male",
-      name: "Stephan Bosu",
+      name: "BuildBridge",
+      description: "oofing is a vital aspect of construction, but it also comes with inherent risks",
       dob: "04/10/1996",
       insurance: "23949293",
       certificate: "Diploma",
@@ -40,18 +42,19 @@ const Contractors = () => {
       state: "Accra",
       country: "Ghana",
       zip: "20302",
-      status: "Active",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
+      verified: 'true',
+      active: 'false'
     },
     {
       key: "2",
       idNumber: "238482",
+      userID: "6da30ae9",
       idType: "NHIS",
       idIssuer: "NHIA",
       idExpiration: "20/03/2023",
       gender: "Female",
-      name: "Gifty Nyame",
+      name: "Borex Inc",
+      description: "oofing is a vital aspect of construction, but it also comes with inherent risks, which is why the",
       dob: "11/08/1995",
       insurance: "23949293",
       certificate: "Phd",
@@ -67,16 +70,15 @@ const Contractors = () => {
       state: "Accra",
       country: "Ghana",
       zip: "20302",
-      status: "Non-verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
+      verified: 'false',
+      active: 'true'
     },
   ];
   const filteredData = data.filter(record => {
     if (selectedStatus === "") {
       return true;
     }
-    return record.status === selectedStatus;
+    return record.active === selectedStatus;
   });
 
   const columns = [
@@ -86,7 +88,12 @@ const Contractors = () => {
       key: "idNumber",
     },
     {
-      title: "TYPE",
+      title: "USER ID", 
+      dataIndex: "userID",
+      key: "userID"
+    },
+    {
+      title: "ID TYPE",
       dataIndex: "idType",
       key: "idType",
     },
@@ -106,9 +113,14 @@ const Contractors = () => {
       key: "gender",
     },
     {
-      title: "NAME",
+      title: "COMPANY NAME",
       dataIndex: "name",
       key: "name",
+    },
+    {
+      title: "DESCRIPTION",
+      dataIndex: "description",
+      key: "description"
     },
     {
       title: "DOB",
@@ -126,7 +138,7 @@ const Contractors = () => {
       key: "certificate",
     },
     {
-      title: "YIB",
+      title: "YEAR IN BUSINESS",
       dataIndex: "yib",
       key: "yib",
     },
@@ -136,12 +148,12 @@ const Contractors = () => {
       key: "website",
     },
     {
-      title: "P.PHONE",
+      title: "PRIMARY PHONE",
       dataIndex: "primaryPhone",
       key: "primaryPhone",
     },
     {
-      title: "S.PHONE",
+      title: "SECONDARY PHONE",
       dataIndex: "secondaryPhone",
       key: "secondaryPhone",
     },
@@ -151,7 +163,7 @@ const Contractors = () => {
       key: "services",
     },
     {
-      title: "LINCENSE NO:",
+      title: "LINCENSE NO",
       dataIndex: "license",
       key: "license",
     },
@@ -186,19 +198,14 @@ const Contractors = () => {
       key: "zip",
     },
     {
-      title: "STATUS",
-      dataIndex: "status",
-      key: "status",
+      title: "IS VERIFIED",
+      dataIndex: "verified",
+      key: "verified",
     },
     {
-      title: "CREATED",
-      dataIndex: "dateCreated",
-      key: "dateCreated",
-    },
-    {
-      title: "UPDATED",
-      dataIndex: "dateUpdated",
-      key: "dateUpdated",
+      title: "IS ACTIVE",
+      dataIndex: "active",
+      key: "active",
     },
     {
       title: "ACTION",
@@ -301,10 +308,8 @@ const Contractors = () => {
               value={selectedStatus}
             >
               <option value="">All</option>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
-              <option value="Verified">Verified</option>
-              <option value="Non-verified">Non-Verified</option>
+              <option value="true">Active</option>
+              <option value="false">Inactive</option>
             </select>
           </div>
         </div>

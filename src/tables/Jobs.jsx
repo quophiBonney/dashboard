@@ -114,12 +114,12 @@ const Jobs = () => {
       key: "description",
     },
     {
-      title: "S.DATE",
+      title: "START DATE",
       dataIndex: "startDate",
       key: "startDate",
     },
     {
-      title: "E.DATE",
+      title: "END DATE",
       dataIndex: "endDate",
       key: "endDate",
     },
@@ -174,7 +174,7 @@ const Jobs = () => {
       key: "skills",
     },
     {
-      title: "A.BID",
+      title: "ACCEPTED BID",
       dataIndex: "acceptedBid",
       key: "acceptedBid",
     },
@@ -189,7 +189,7 @@ const Jobs = () => {
       key: "status",
     },
     {
-      title: "C.DATE",
+      title: "CLOSED DATE",
       dataIndex: "closedDate",
       key: "closedDate",
     },

@@ -44,10 +44,10 @@ const AppHeader = ({toggleSidebar}) => {
         <p className="mt-2 text-light">Chris Soronto</p>
       </div>
       <Menu.Item>
-        <div>
+        <Link to="/profile" className="text-decoration-none text-dark">
           <BsPerson className="m-2" />
           My Profile
-        </div>
+        </Link>
       </Menu.Item>
       <Menu.Item>
         <div>
@@ -56,7 +56,7 @@ const AppHeader = ({toggleSidebar}) => {
         </div>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/login">
+        <Link to="/auth/login" className="text-decoration-none text-dark">
           <BsPower className="m-2" />
           Logout
         </Link>
@@ -77,7 +77,7 @@ const AppHeader = ({toggleSidebar}) => {
             </Button>
           </div>
           <div className="col-8 col-xs-12">
-            <p className="title">BB Dashboard</p>
+            <p className="title text-center fw-bold" style={{color: "teal"}}>BB Dashboard</p>
             <div className="d-flex  mt-3">
               <div className="hide w-100">
                 <form>
@@ -114,28 +114,11 @@ const AppHeader = ({toggleSidebar}) => {
           <div className="col-2 text-end">
             <div className="ms-auto align-items-center">
               <Dropdown overlay={menu} trigger={["click"]}>
-                <Tooltip title="Username">
                   <Button
                     className="rounded-pill"
                     style={{color: "teal"}}
                     icon={<UserOutlined />}
                   ></Button>
-                </Tooltip>
-              </Dropdown>
-              <Dropdown
-                overlay={messages}
-                trigger={["click"]}
-                className="m-2 hide"
-              >
-                <Tooltip title="Messages">
-                  <Badge count={10}>
-                    <Button
-                      className="rounded-pill"
-                      style={{color: "teal"}}
-                      icon={<BellFilled />}
-                    />
-                  </Badge>
-                </Tooltip>
               </Dropdown>
             </div>
           </div>

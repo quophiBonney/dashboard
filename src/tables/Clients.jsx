@@ -30,81 +30,8 @@ const Clients = () => {
       state: "Accra",
       country: "Ghana",
       zip: 20302,
-      status: "Active",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "2",
-      idNumber: 238482,
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Female",
-      dob: "04/10/1996",
-      address: "B/A 78",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: 20302,
-      status: "Non-verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "3",
-      idNumber: 238482,
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Male",
-      dob: "04/10/1998",
-      address: "BW 88",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: 20302,
-      status: "Verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "4",
-      idNumber: 238482,
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Male",
-      dob: "04/10/1998",
-      address: "BW 88",
-      city: "Accra",
-      region: "G. Accra",
-      state: "Accra",
-      country: "Ghana",
-      zip: 20302,
-      status: "Verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
-    },
-    {
-      key: "5",
-      idNumber: 238482,
-      idType: "NHIS",
-      idIssuer: "NHIA",
-      idExpiration: "20/03/2023",
-      gender: "Male",
-      dob: "04/10/1998",
-      address: "BW 88",
-      city: "Accra",
-      region: "N. Region",
-      state: "Bawku",
-      country: "Ghana",
-      zip: 20302,
-      status: "Verified",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
+      profile: "",
+      active: "Active"
     },
     {
       key: "6",
@@ -120,16 +47,15 @@ const Clients = () => {
       state: "Koforidua",
       country: "Ghana",
       zip: 20302,
-      status: "Inactive",
-      dateCreated: "10/11/2022",
-      dateUpdated: "12/01/2023",
+      profile: "",
+      active: "Inactive",
     },
   ];
   const filteredData = data.filter(record => {
     if (selectedStatus === "") {
       return true; // Show all records if no filter is selected
     }
-    return record.status === selectedStatus; // Show records based on selected filter
+    return record.active === selectedStatus; // Show records based on selected filter
   });
 
   const columns = [
@@ -194,19 +120,14 @@ const Clients = () => {
       key: "zip",
     },
     {
-      title: "STATUS",
-      dataIndex: "status",
-      key: "status",
+      title: "PROFILE PICTURE",
+      dataIndex: "profile",
+      key: "profile",
     },
     {
-      title: "CREATED",
-      dataIndex: "dateCreated",
-      key: "dateCreated",
-    },
-    {
-      title: "UPDATED",
-      dataIndex: "dateUpdated",
-      key: "dateUpdated",
+      title: "ACTIVE",
+      dataIndex: "active",
+      key: "active",
     },
     {
       title: "ACTION",
@@ -297,8 +218,6 @@ const Clients = () => {
               <option value="">All</option>
               <option value="Active">Active</option>
               <option value="Inactive">Inactive</option>
-              <option value="Verified">Verified</option>
-              <option value="Non-verified">Non-Verified</option>
             </select>
           </div>
         </div>

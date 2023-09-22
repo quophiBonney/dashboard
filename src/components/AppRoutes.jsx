@@ -18,6 +18,7 @@ import Contract from "../tables/Contract";
 import Payment from "../tables/Payment";
 import ForgotPassword from "../auth/ForgotPassword";
 import Messages from "../tables/Messages";
+import Profile from "../profile/Profile";
 const AppRoutes = () => {
   return (
     <div>
@@ -38,6 +39,7 @@ const AppRoutes = () => {
         <Route path="/password-recovery" element={<ForgotPassword />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/bar-chart" element={<BarChart />} />
+        <Route path="/profile" element={<Profile/>}/>
       </Routes>
     </div>
   );
