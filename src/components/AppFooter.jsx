@@ -1,5 +1,5 @@
 import React from "react";
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const AppFooter = () => {
   const location = useLocation();
   if (
@@ -12,7 +12,7 @@ const AppFooter = () => {
   }
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid shadow">
         <div className="row justify-content-center">
           <div className="col-12 text-center">
             <p className="fs-6">All rights reserved &copy; 2023 BuildBridge</p>

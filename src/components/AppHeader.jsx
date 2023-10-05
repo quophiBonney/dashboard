@@ -1,12 +1,12 @@
 import React from "react";
-import {Layout, Avatar, Button, Menu, Dropdown, Badge, Tooltip} from "antd";
-import {BiMenuAltRight} from "react-icons/bi";
-import {BellFilled, UserOutlined} from "@ant-design/icons";
-import {BsLock, BsPerson, BsPower} from "react-icons/bs";
-import {useLocation} from "react-router-dom";
-import {Link} from "react-router-dom";
-const {Header} = Layout;
-const AppHeader = ({toggleSidebar}) => {
+import { Layout, Avatar, Button, Menu, Dropdown, Badge, Tooltip } from "antd";
+import { BiMenuAltRight } from "react-icons/bi";
+import { BellFilled, UserOutlined } from "@ant-design/icons";
+import { BsLock, BsPerson, BsPower } from "react-icons/bs";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+const { Header } = Layout;
+const AppHeader = ({ toggleSidebar }) => {
   const location = useLocation();
   if (
     location.pathname === "/" ||
@@ -17,7 +17,7 @@ const AppHeader = ({toggleSidebar}) => {
     return null;
   }
   const messages = (
-    <Menu style={{width: "250px"}}>
+    <Menu style={{ width: "250px" }}>
       <div className="card border-0 text-center">
         <p className="mt-2 py-3">Received Messages</p>
       </div>
@@ -39,8 +39,8 @@ const AppHeader = ({toggleSidebar}) => {
     </Menu>
   );
   const menu = (
-    <Menu style={{width: "250px"}}>
-      <div className="card border-0 text-center" style={{background: "teal"}}>
+    <Menu style={{ width: "250px" }}>
+      <div className="card border-0 text-center" style={{ background: "teal" }}>
         <p className="mt-2 text-light">Chris Soronto</p>
       </div>
       <Menu.Item>
@@ -50,10 +50,10 @@ const AppHeader = ({toggleSidebar}) => {
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <div>
+        <Link to="/change-password" className="text-decoration-none text-dark">
           <BsLock className="m-2" />
           Change Password
-        </div>
+        </Link>
       </Menu.Item>
       <Menu.Item>
         <Link to="/auth/login" className="text-decoration-none text-dark">
@@ -71,13 +71,15 @@ const AppHeader = ({toggleSidebar}) => {
             <Button
               className="border-0 text-white"
               onClick={toggleSidebar}
-              style={{background: "#fff"}}
+              style={{ background: "#fff" }}
             >
-              <BiMenuAltRight size={25} style={{color: "teal"}} />
+              <BiMenuAltRight size={25} style={{ color: "teal" }} />
             </Button>
           </div>
           <div className="col-8 col-xs-12">
-            <p className="title text-center fw-bold" style={{color: "teal"}}>BB Dashboard</p>
+            <p className="title text-center fw-bold" style={{ color: "teal" }}>
+              BB Dashboard
+            </p>
             <div className="d-flex  mt-3">
               <div className="hide w-100">
                 <form>
@@ -85,21 +87,21 @@ const AppHeader = ({toggleSidebar}) => {
                     <input
                       type="text"
                       className="form-control"
-                      style={{borderRadius: "5px"}}
+                      style={{ borderRadius: "5px" }}
                       placeholder="Search"
                     />
                     <div className="input-group-append">
                       <input
                         type="submit"
                         className="form-control text-light"
-                        style={{background: "teal", marginLeft: "5px"}}
+                        style={{ background: "teal", marginLeft: "5px" }}
                         value="Search"
                       />
                     </div>
                   </div>
                 </form>
               </div>
-              <div className="hide w-50" style={{marginLeft: "40px"}}>
+              <div className="hide w-50" style={{ marginLeft: "40px" }}>
                 <select className="form-control">
                   <option value="" selected>
                     --- Filter Role ---
@@ -114,11 +116,11 @@ const AppHeader = ({toggleSidebar}) => {
           <div className="col-2 text-end">
             <div className="ms-auto align-items-center">
               <Dropdown overlay={menu} trigger={["click"]}>
-                  <Button
-                    className="rounded-pill"
-                    style={{color: "teal"}}
-                    icon={<UserOutlined />}
-                  ></Button>
+                <Button
+                  className="rounded-pill"
+                  style={{ color: "teal" }}
+                  icon={<UserOutlined />}
+                ></Button>
               </Dropdown>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route, useLocation} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 //Page content imports
 import Dashboard from "../pages/Dashboard";
 import Analytics from "../pages/Analytics";
@@ -19,6 +19,7 @@ import Payment from "../tables/Payment";
 import ForgotPassword from "../auth/ForgotPassword";
 import Messages from "../tables/Messages";
 import Profile from "../profile/Profile";
+import ChangePassword from "../profile/ChangePassword";
 const AppRoutes = () => {
   return (
     <div>
@@ -39,7 +40,8 @@ const AppRoutes = () => {
         <Route path="/password-recovery" element={<ForgotPassword />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/bar-chart" element={<BarChart />} />
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/change-password" element={<ChangePassword />} />
       </Routes>
     </div>
   );

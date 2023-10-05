@@ -4,11 +4,7 @@ import {Link} from "react-router-dom";
 import {
   BsBell,
   BsFillProjectorFill,
-  BsPerson,
-  BsSearch,
-  BsTable,
 } from "react-icons/bs";
-import {GrUserWorker} from "react-icons/gr";
 import {useLocation} from "react-router-dom";
 import {
   BiBuilding,
@@ -35,6 +31,7 @@ const SideMenu = ({collapsed}) => {
       collapsed={collapsed}
       className=""
       style={{backgroundColor: "teal", minHeight: "100vh"}}
+      
     >
       <Menu mode="inline">
         <Menu.Item key="/" style={{color: "white"}} icon={<BiSolidHome />}>
